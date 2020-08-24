@@ -1,4 +1,10 @@
-<%= simple_form_for @festival do |f| %>
-<%= f.input :name, collection: %w(Glastonbury Boomtown Wilderness) %>
-<%= f.submit 'Confirm' %>
-<% end %>
+<div class="initial-form">
+  <%= simple_form_for :search, url: root_path, method: 'GET' do |f| %>
+  <%= f.input :name, collection: %w(Glastonbury Boomtown Wilderness), label: false %>
+  <%= f.submit 'Go' %>
+  <% end %>
+</div>
+
+<!--
+need to make 'go' submit the form
+need to style -->
