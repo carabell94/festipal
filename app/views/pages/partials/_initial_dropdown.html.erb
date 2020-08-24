@@ -1,0 +1,10 @@
+<div class="initial-form">
+  <%= simple_form_for :search, url: festival_path(@festival), method: 'GET' do |f| %>
+  <%= f.input :name, collection: %w(Glastonbury Boomtown Wilderness), label: false %>
+  <%= f.submit 'Go' %>
+  <% end %>
+</div>
+
+<!--
+need to make 'go' submit the form
+need to style -->
