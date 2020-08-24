@@ -1,0 +1,2 @@
+class UserSchedulesController < ApplicationController
+end
