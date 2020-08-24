@@ -1,14 +1,18 @@
 .footer{
   text-align: center;
   padding: 10px;
-  background-color: #fddb3a !important;
+  background-color: #209CEE !important;
   p {
-    color: white;
+    color: #FA5;
   }
 }
 
+// .title p {
+//   font-family: Tahoma;
+// }
+
 #authors {
-  font-size: 8px;
+  font-size: 10px;
 }
 .social {
   position: absolute;
@@ -30,7 +34,7 @@
   font-size: 20px;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: #FA5;
   margin: 0 20px;
   transition: 0.5s;
 }
@@ -42,7 +46,7 @@
 .social li a span:nth-child(3) {
   width: 100%;
   height: 1px;
-  background: white;
+  background: #FA5;
 }
 .social li a span:nth-child(1) {
   top: 0;
@@ -69,7 +73,7 @@
 .social li a span:nth-child(4) {
   width: 1px;
   height: 100%;
-  background: white;
+  background: #FA5;
 }
 .social li a span:nth-child(2) {
   top: 0;
