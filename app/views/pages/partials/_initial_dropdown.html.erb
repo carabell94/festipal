@@ -1,5 +1,5 @@
 <div class="initial-form">
-  <%= simple_form_for :search, url: root_path, method: 'GET' do |f| %>
+  <%= simple_form_for :search, url: festival_path(@festival), method: 'GET' do |f| %>
   <%= f.input :name, collection: %w(Glastonbury Boomtown Wilderness), label: false %>
   <%= f.submit 'Go' %>
   <% end %>
