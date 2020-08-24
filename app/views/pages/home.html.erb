@@ -1,3 +1,5 @@
-<h1>FestiPal</h1>
+<h4 class='text-center'>Ready to start planning your festival experience?</h4>
 
-<%= render 'partial/initial_dropdown', festival: @festival %>
+<%= render 'pages/partials/initial_dropdown' %>
+
+<%= link_to 'Go', festival_path(@festival) %>
