@@ -6,10 +6,49 @@
 }
 
 #home-banner {
-  background-image: url("background.jpg");
+  background-image: url("silhouette.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    font-family: 'comfortaa', serif;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 32px;
+
+    @media (max-width: 540px) {
+      padding-top: 56px;
+      padding-bottom: 24px;
+      font-size: 24px;
+    }
+
+  }
+}
+
+.form-control {
+  background-color: #90b1eb;
+  color: white;
+  // border: 1px solid white;
+  box-shadow: 0 0 8px;
+  width: 40vw;
+
+
+  input: focus {
+    outline: #90b1eb;
+  }
+
+  @media (max-width: 540px) {
+    width: 60vw;
+  }
+}
+
+.select-items,.select-selected {
+  background-color: #90b1eb;
 }
 
 //  /* For a screen < 960px, this CSS will be read */

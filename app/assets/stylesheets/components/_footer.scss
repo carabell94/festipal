@@ -4,6 +4,10 @@
   background-color: #1f292f !important;
   p {
     color: white;
+
+    @media (max-width: 540px) {
+      margin-bottom: 0px;
+    }
   }
 
   @media (max-width: 540px) {
@@ -27,9 +31,11 @@
 
 #authors {
   font-size: 10px;
+  margin-top: 16px;
 
   @media (max-width: 540px) {
     font-size: 8px;
+    margin-top: 0px;
   }
 }
 .social {

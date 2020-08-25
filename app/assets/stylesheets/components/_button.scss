@@ -1,15 +1,17 @@
-// Green button with orangey hover effect
+// Pink button with dark purple hover effect
 .btn-info {
-  background-color: ##06cd76;
+  background-color: #c3a1ba;
   color: white;
-  border: ##06cd76;
+  border: #c3a1ba;
   box-shadow: 0 0 8px;
   margin-top: 0px;
   border-radius: 5px;
+  padding: 8px 16px;
 
   &:hover {
     transform: scale(1.1);
     transition: 0.3s;
+    background-color: #57496c;
   }
 }
 
