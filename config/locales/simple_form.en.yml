@@ -11,6 +11,9 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     # Examples
+      placeholders:
+        user:
+          name: 'Choose Festival'
     # labels:
     #   defaults:
     #     password: 'Password'

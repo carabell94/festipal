@@ -1,10 +1,9 @@
-<div class="initial-form form-group text-center">
+<div class="initial-form form-group text-center mx-5">
   <%= simple_form_for :search, url: festival_path(@festival), method: 'GET' do |f| %>
-  <%= f.input :name, collection: %w(Glastonbury Boomtown Wilderness), label: 'Choose a Festival' %>
+  <%= f.input :name, collection: ['Glastonbury', 'Boomtown', 'Wilderness'], label: false, prompt: 'Choose Festival...' %>
   <%= f.submit 'Go', class: 'btn btn-info' %>
   <% end %>
 </div>
 
 <!--
-need to make 'go' submit the form
-need to style -->
+how to style dropdown? -->
