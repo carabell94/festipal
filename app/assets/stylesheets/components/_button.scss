@@ -1,4 +1,4 @@
-// Pink button with dark purple hover effect
+// Pink button with darker hover effect
 .btn-info {
   background-color: #c3a1ba;
   color: white;
@@ -11,7 +11,8 @@
   &:hover {
     transform: scale(1.1);
     transition: 0.3s;
-    background-color: #57496c;
+    background-color: #BE88B0;
+    color: white;
   }
 }
 
