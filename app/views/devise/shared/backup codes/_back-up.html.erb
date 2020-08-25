@@ -1,0 +1,2 @@
+<!-- I do not want to lose this code for the Facebook button, so I am keeping it in a separate file, in case we need it. It is not link with anyone, does not do anything, but I cannot comment it out -->
+<%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class: "btn btn-lg btn-primary rounded-pill" %><br />

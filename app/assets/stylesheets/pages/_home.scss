@@ -1,1 +1,76 @@
 // Specific CSS for your home-page
+
+
+.min-height {
+  min-height: calc(100vh - 210px);
+}
+
+#home-banner {
+  background-image: url("silhouette.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    font-family: 'comfortaa', serif;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 32px;
+
+    @media (max-width: 540px) {
+      padding-top: 56px;
+      padding-bottom: 24px;
+      font-size: 24px;
+    }
+
+  }
+}
+
+.form-control {
+  background-color: #90b1eb;
+  color: white;
+  // border: 1px solid white;
+  box-shadow: 0 0 8px ;
+  width: 35vw;
+
+
+  input: focus {
+    outline: #90b1eb;
+  }
+
+  @media (max-width: 540px) {
+    width: 60vw;
+  }
+}
+
+// centers dropdown options
+select {
+   text-align-last: center;
+   text-align: center;
+   -ms-text-align-last: center;
+   -moz-text-align-last: center;
+}
+
+//  /* For a screen < 960px, this CSS will be read */
+// @media (max-width: 960px) {
+//   .min-height {
+//   min-height: calc(100vh - 210px);
+//   }
+// }
+
+//   /* For a screen < 720px, this CSS will be read */
+// @media (max-width: 720px) {
+//   .min-height {
+//     min-height: calc(100vh - 210px);
+//   }
+// }
+//   /* For a screen < 540px, this CSS will be read */
+// @media (max-width: 540px) {
+//   .min-height {
+//     min-height: calc(100vh - 210px);
+//   }
+// }

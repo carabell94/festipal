@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_135305) do
+ActiveRecord::Schema.define(version: 2020_08_24_161938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2020_08_24_135305) do
   create_table "schedules", force: :cascade do |t|
     t.bigint "festival_id", null: false
     t.string "day"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.integer "start_time"
+    t.integer "end_time"
     t.string "artist"
     t.string "stage"
     t.string "genre"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(version: 2020_08_24_135305) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.string "provider"
+    t.string "uid"
+    t.string "facebook_picture_url"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "token"
+    t.datetime "token_expiry"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

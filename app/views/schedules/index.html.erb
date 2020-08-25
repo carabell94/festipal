@@ -1,2 +1,21 @@
-<h1>Schedules#index</h1>
-<p>Find me in app/views/schedules/index.html.erb</p>
+<h1>Schedule</h1>
+<p>Please select artists to populate your personal schedule.</p>
+
+
+<h2>Pyramid Stage</h2>
+<% @schedules.order(id: :asc).each do |schedule| %>
+  <% if schedule.stage == 'Pyramid Stage' %>
+    <% if schedule.end_time < 24 %>
+      <p><%= schedule.artist %>
+        <%= schedule.start_time %>.00 -
+        <%= schedule.end_time %>.00</p>
+    <% else %>
+      <p><%= schedule.artist %>
+          <%= schedule.start_time %>.00 -
+          00.00</p>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
