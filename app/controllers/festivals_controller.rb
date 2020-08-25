@@ -5,7 +5,7 @@ def index
 end
 
 def show
-  @festival = Festival.find(params[:id])
+  @festival = Festival.where(name: params[:search][:name])
 end
 
 end

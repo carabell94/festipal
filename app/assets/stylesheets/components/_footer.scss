@@ -1,9 +1,13 @@
 .footer{
   text-align: center;
   padding: 10px;
-  background-color: black !important;
+  background-color: #1f292f !important;
   p {
     color: white;
+  }
+
+  @media (max-width: 540px) {
+    padding: 8px;
   }
 }
 
@@ -11,8 +15,22 @@
 //   font-family: Tahoma;
 // }
 
+.festipal-2020 {
+  font-size: 16px;
+  padding-top: 24px;
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+}
+
 #authors {
   font-size: 10px;
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+  }
 }
 .social {
   position: absolute;
@@ -37,6 +55,14 @@
   color: white;
   margin: 0 20px;
   transition: 0.5s;
+
+  @media (max-width: 540px) {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 8px;
+    margin: 0 8px;
+  }
 }
 .social li a span {
   position: absolute;
