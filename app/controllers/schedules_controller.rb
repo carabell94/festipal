@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.where(festival_id: 1, day: 'Friday')
   end
 
   # def create
