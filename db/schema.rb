@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2020_08_24_161938) do
   create_table "schedules", force: :cascade do |t|
     t.bigint "festival_id", null: false
     t.string "day"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.integer "start_time"
+    t.integer "end_time"
     t.string "artist"
     t.string "stage"
     t.string "genre"
