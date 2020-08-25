@@ -47,8 +47,12 @@
   }
 }
 
-.select-items,.select-selected {
-  background-color: #90b1eb;
+// centers dropdown options
+select {
+   text-align-last: center;
+   text-align: center;
+   -ms-text-align-last: center;
+   -moz-text-align-last: center;
 }
 
 //  /* For a screen < 960px, this CSS will be read */
