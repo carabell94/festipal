@@ -1,2 +1,8 @@
-<h1>Schedules#index</h1>
-<p>Find me in app/views/schedules/index.html.erb</p>
+<h1>Schedule</h1>
+<p>Please select artists to populate your personal schedule.</p>
+
+<% @schedules.each do |schedule| %>
+  <p><%= schedule.artist %>
+  <%= schedule.start_time.strftime("%H:%M") %>
+  <%= schedule.end_time.strftime("%H:%M") %></p>
+<% end %>
