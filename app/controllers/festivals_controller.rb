@@ -12,5 +12,17 @@ def find_festival
   redirect_to festival_path(@festival)
 end
 
+def display_friday
+  render :display_friday
+end
+
+def display_saturday
+  render :display_saturday
+end
+
+def display_sunday
+  render :display_sunday
+end
+
 
 end
