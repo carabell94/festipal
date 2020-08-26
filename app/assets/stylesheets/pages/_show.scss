@@ -15,24 +15,31 @@
   position-position: center;
   height: 100vh;
 
+// 'Change Day' Dropdown Styling - Fri/Sat/Sun
   .dropdown-menu.show {
     background-color: #c4a0b9!important;
-    color: white;
   }
 
   .nav-item.dropdown.show {
+
+    .dropdown-toggle {
     background-color: #c4a0b9!important;
     color: white;
+    }
   }
 }
 
+// 'Change Day' Dropdown Styling
 .nav-link.dropdown-toggle {
   border: 1px solid white;
 }
 
-.nav-pills.show > .nav-link {
-  background-color: #c4a0b9!important;
+.display-day-of-week {
   color: white;
+  text-align: center;
+  padding-top: 4px;
+  font-family: electronicadisplay;
 }
+
 
 
