@@ -1,6 +1,8 @@
 <div class="initial-form form-group text-center mx-5">
-  <%= simple_form_for :search, url: festival_path(@festival), method: 'GET' do |f| %>
-  <%= f.input :name, collection: ['Glastonbury', 'Boomtown Fair', 'Wilderness'], label: false, prompt: 'Choose Festival...' %>
+
+  <%= simple_form_for :search, url: find_festival_path, method: 'get' do |f| %>
+  <%= f.select :id, options_from_collection_for_select(Festival.all, "id", "name"), label: false, prompt: 'Choose Festival...' %>
+
   <%= f.submit 'Go', class: 'btn btn-info' %>
   <% end %>
 </div>
