@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_161938) do
+ActiveRecord::Schema.define(version: 2020_08_26_210800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,16 +24,23 @@ ActiveRecord::Schema.define(version: 2020_08_24_161938) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.bigint "festival_id", null: false
     t.string "day"
     t.integer "start_time"
     t.integer "end_time"
     t.string "artist"
-    t.string "stage"
     t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["festival_id"], name: "index_schedules_on_festival_id"
+    t.bigint "stage_id", null: false
+    t.index ["stage_id"], name: "index_schedules_on_stage_id"
+  end
+
+  create_table "stages", force: :cascade do |t|
+    t.string "name"
+    t.bigint "festival_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["festival_id"], name: "index_stages_on_festival_id"
   end
 
   create_table "user_schedules", force: :cascade do |t|
@@ -65,7 +72,8 @@ ActiveRecord::Schema.define(version: 2020_08_24_161938) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "schedules", "festivals"
+  add_foreign_key "schedules", "stages"
+  add_foreign_key "stages", "festivals"
   add_foreign_key "user_schedules", "schedules"
   add_foreign_key "user_schedules", "users"
 end
