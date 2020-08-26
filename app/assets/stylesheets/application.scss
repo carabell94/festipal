@@ -13,4 +13,11 @@
 @import "pages/index";
 @import "components/footer";
 @import "components/button";
+@import "pages/show";
 
+// External Fonts
+  @font-face {
+    font-family: electronicadisplay;
+    src: url("fonts/electronicadisplay.otf");
+    src: url("fonts/electronicadisplay.otf") format('otf');
+  }
