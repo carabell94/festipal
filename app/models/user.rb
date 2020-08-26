@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
   has_many :user_schedules
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice("provider", "uid")
