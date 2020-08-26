@@ -9,21 +9,25 @@ class SchedulesController < ApplicationController
     @festival = Festival.find(params[:festival_id])
     @festival.schedule = @schedule
     if @schedule.save!
-      redirect_to myfestipal_path # change this path
+      redirect_to festival_schedule_path(@festival, @schedule)
     end
   end
 
   def update
     find_by_id
     if @schedule.update(strong_params)
-      redirect_to myfestipal_path # change this path
+      redirect_to festival_schedule_path(@festival, @schedule)
     end
   end
 
   def destroy
     find_by_id
     @schedule.destroy
-    redirect_to myfestipal_path # change this path
+    redirect_to festival_path(@festival)
+  end
+
+  def show
+    @festival = Festival.first
   end
 
   private
@@ -33,6 +37,7 @@ class SchedulesController < ApplicationController
   end
 
   def find_by_id
+    @festival = Festival.find(params[:festival_id])
     @schedule = Schedule.find(params[:id])
   end
 end
