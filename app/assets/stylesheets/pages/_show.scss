@@ -5,4 +5,34 @@
 
 .festival-name {
   font-family: electronicadisplay, sans-serif;
+  margin-top: 0px;
+  color: white;
 }
+
+.show-page {
+  background-image: url("silhouette.jpg");
+  background-size: cover;
+  position-position: center;
+  height: 100vh;
+
+  .dropdown-menu.show {
+    background-color: #c4a0b9!important;
+    color: white;
+  }
+
+  .nav-item.dropdown.show {
+    background-color: #c4a0b9!important;
+    color: white;
+  }
+}
+
+.nav-link.dropdown-toggle {
+  border: 1px solid white;
+}
+
+.nav-pills.show > .nav-link {
+  background-color: #c4a0b9!important;
+  color: white;
+}
+
+
