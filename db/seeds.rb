@@ -1,10 +1,10 @@
 require 'faker'
 
-glastonbury = Festival.create(name: 'Glastonbury Festival', start_date: '28/08/2020', end_date: '30/08/2020')
+glastonbury = Festival.create(name: 'Glastonbury', start_date: '28/08/2020', end_date: '30/08/2020')
 
-boomtown = Festival.create(name: 'Boomtown Fair', start_date: '04/09/2020', end_date: '06/09/2020')
+boomtown = Festival.create(name: 'Boomtown', start_date: '04/09/2020', end_date: '06/09/2020')
 
-wilderness = Festival.create(name: 'Wilderness Festival', start_date: '11/09/2020', end_date: '13/09/2020')
+wilderness = Festival.create(name: 'Wilderness', start_date: '11/09/2020', end_date: '13/09/2020')
 
 glastonbury_festival = 0
 boomtown_festival = 0
