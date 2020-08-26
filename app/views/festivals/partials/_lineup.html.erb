@@ -1,22 +1,7 @@
-<% simple_form_for :search,url: @festival.schedule.day, method: 'GET' do |f|%>
-  <% f.select :day, collection: %w(Friday Saturday Sunday) %>
-<% end %>
+<p>aaaaa</p>
 
 <h1>Schedule</h1>
 <p>Please select artists to populate your personal schedule.</p>
 
 
-<h2>Pyramid Stage</h2>
-<% @schedules.order(id: :asc).each do |schedule| %>
-  <% if schedule.stage == 'Pyramid Stage' %>
-    <% if schedule.end_time < 24 %>
-      <p><%= schedule.artist %>
-        <%= schedule.start_time %>.00 -
-        <%= schedule.end_time %>.00</p>
-    <% else %>
-      <p><%= schedule.artist %>
-          <%= schedule.start_time %>.00 -
-          00.00</p>
-    <% end %>
-  <% end %>
-<% end %>
+
