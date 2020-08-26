@@ -11,6 +11,7 @@ end
 
 def show
   @festival = Festival.find(params[:search][:id])
+  @schedules = Schedule.all
 end
 
 end
