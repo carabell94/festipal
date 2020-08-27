@@ -27,7 +27,7 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @festival = Festival.first # need to change this - only showing Glasto atm
+    @festival = Festival.find(params[:festival_id]) # need to change this - only showing Glasto atm
   end
 
   private
