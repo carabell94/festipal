@@ -33,17 +33,22 @@ end
 end
 end
 
+id = 1
+
 3.times do
-day.each do |d|
-  4.times do
-    hours.each do |h|
-      Schedule.update(day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
+  day.each do |d|
+    4.times do
+      hours.each do |h|
+        schedule = Schedule.find(id)
+        schedule.update(day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
+        p schedule
+        id += 1
+      end
+      p 'done hours'
     end
-    p 'done hours'
+    p 'done 4 times hours'
   end
-  p 'done 4 times hours'
-end
-p 'done days'
+  p 'done days'
 end
 p 'done 3 times day'
 

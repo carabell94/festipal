@@ -4,7 +4,7 @@
 
 <div class="show-page">
   <h1 class="text-center pt-3 festival-name"><%= @festival.name %></h1>
-  <%= render 'festivals/partials/show-tabs' %>
+  <%= render 'festivals/partials/show-tabs', festival: @festival %>
 
   <!-- 3 PARTIALS, toggle between tabs (buttons that appear as tabs) -->
   <!-- Code html, then use javascript for eventlisteners to render something dependent on the click -->

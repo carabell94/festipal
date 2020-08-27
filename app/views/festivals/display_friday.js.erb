@@ -1,2 +1,2 @@
 document.querySelector('.display-day').innerHTML = "";
-document.querySelector('.display-day').insertAdjacentHTML('beforeend', `<%= render 'festivals/partials/display-friday' %>`);
+document.querySelector('.display-day').insertAdjacentHTML('beforeend', `<%= render 'festivals/partials/display-friday', festival: @festival %>`);
