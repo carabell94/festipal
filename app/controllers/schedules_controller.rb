@@ -27,7 +27,7 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @festival = Festival.first
+    @festival = Festival.first # need to change this - only showing Glasto atm
   end
 
   private

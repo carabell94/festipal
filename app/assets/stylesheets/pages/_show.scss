@@ -1,6 +1,6 @@
 @font-face {
   font-family: electronicadisplay;
-  src: url("electronicadisplay.otf");
+  src: font-url("electronicadisplay.otf");
   }
 
 .festival-name {
@@ -10,10 +10,9 @@
 }
 
 .show-page {
-  background-image: url("silhouette.jpg");
+  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg");
   background-size: cover;
   position-position: center;
-  height: 100vh;
 
 // 'Change Day' Dropdown Styling - Fri/Sat/Sun
   .dropdown-menu.show {
