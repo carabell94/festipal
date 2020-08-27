@@ -22,6 +22,6 @@
 // External Fonts
   @font-face {
     font-family: electronicadisplay;
-    src: url("fonts/electronicadisplay.otf");
-    src: url("fonts/electronicadisplay.otf") format('otf');
+    src: font-url("electronicadisplay.otf");
+    src: font-url("electronicadisplay.otf") format('otf');
   }
