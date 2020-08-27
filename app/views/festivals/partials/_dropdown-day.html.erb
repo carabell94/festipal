@@ -3,7 +3,7 @@
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Change Day</a>
     <div class="dropdown-menu">
       <!-- <a class="dropdown-item" href="/display_friday" remote="true" method="get">Friday</a> -->
-      <%= link_to 'Friday', display_friday_path(festival: @festival), remote: true, method: :get, class: "dropdown-item" %>
+      <%= link_to 'Friday', display_friday_path(festival: festival), remote: true, method: :get, class: "dropdown-item" %>
       <!-- <a class="dropdown-item" href="/display_saturday" remote="true" method="get">Saturday</a> -->
       <%= link_to 'Saturday', display_saturday_path, remote: true, method: :get, class: "dropdown-item" %>
       <!-- <a class="dropdown-item" href="/display_sunday" remote="true" method="get">Sunday</a> -->

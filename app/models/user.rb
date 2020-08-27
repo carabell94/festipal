@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
   has_many :user_schedules
+  has_many :schedules, through: :user_schedules
   validates :first_name, presence: true
   validates :last_name, presence: true
 
