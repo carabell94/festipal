@@ -1,0 +1,12 @@
+.render-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  // }
+  flex-wrap: wrap;
+}
+.festival-name {
+  color: white;
+}
