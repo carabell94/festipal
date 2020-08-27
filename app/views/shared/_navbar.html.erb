@@ -25,7 +25,6 @@
   </div>
 </div>
 
-
 <div class="menu1">
     <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: "active" %></li>
     <li><%= link_to "My FestiPal", festival_schedule_path(@festival || Festival.first, :id) %></li>
