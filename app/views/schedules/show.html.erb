@@ -6,9 +6,13 @@
 <div class="wrapper">
   <div class="schedule text-center">
      <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    </p>
+    <% current_user.user_schedules.each do |concert| %>
+      <% if concert.schedule.end_time == 24 %>
+          <p><%= concert.schedule.artist %>  <%= concert.schedule.start_time %>.00 - 00.00</p>
+        <% else %>
+          <p><%= concert.schedule.artist %>  <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
+        <% end %>
+      <% end %>
   </div>
 </div>
 
