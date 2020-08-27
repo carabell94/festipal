@@ -23,34 +23,18 @@ all.each do|festival|
   id +=1
 end
 
-3.times do
-  (1..12).each do |stage|
-    12.times do
-      schedule = Schedule.create(stage_id: stage)
-      schedule.save!
-      # p schedule.stage_id
-    end
-  end
-end
-
-id = 1
-
-3.times do
-  day.each do |d|
-    4.times do
+[glastonbury, boomtown, wilderness].each do |festival|
+  festival.stages.each do |stage|
+    day.each do |d|
       hours.each do |h|
-        schedule = Schedule.find(id)
-        schedule.update(day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
+        schedule = Schedule.new(stage: stage, day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
+        schedule.save!
         p schedule
-        id += 1
       end
-      p 'done hours'
     end
-    p 'done 4 times hours'
   end
-  p 'done days'
 end
-p 'done 3 times day'
+
 
 
 
