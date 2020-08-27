@@ -22,7 +22,7 @@
 }
 .dropdown-menu {
   border-radius: 5px;
-  background-color: rgba(197, 162, 187, .4);
+  background-color: #c6a1bc;
   padding: 0;
   margin: 5px 0;
 }
@@ -43,7 +43,7 @@ background-color: lightgrey;
   height: 40px;
   text-align: center;
   width: 100%;
-  background-color: rgba(197, 162, 187, .7);
+  background-color: #d3bbcc;
 }
 
 
@@ -58,5 +58,13 @@ background-color: lightgrey;
 
 .menu1 li {
   display: inline;
+}
+
+.sub-navbar {
+  font-size: 12px;
+}
+
+.active.color-white {
+   color: white;
 }
 
