@@ -17,33 +17,33 @@ hours = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 # Allocating stages
 id = 1
 all.each do|festival|
-  festival.each do |stage|
-    Stage.create(name: stage, festival_id: id)
-  end
-  id +=1
+festival.each do |stage|
+  Stage.create(name: stage, festival_id: id)
+end
+id +=1
 end
 
 3.times do
-  (1..12).each do |stage|
-    12.times do
-      schedule = Schedule.create(stage_id: stage)
-      schedule.save!
-      # p schedule.stage_id
-    end
+(1..12).each do |stage|
+  12.times do
+    schedule = Schedule.create(stage_id: stage)
+    schedule.save!
+    # p schedule.stage_id
   end
+end
 end
 
 3.times do
-  day.each do |d|
-    4.times do
-      hours.each do |h|
-        Schedule.update(day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
-      end
-      p 'done hours'
+day.each do |d|
+  4.times do
+    hours.each do |h|
+      Schedule.update(day: d, start_time: h, end_time: h + 1, artist: Faker::Music.band, genre: Faker::Music.genre)
     end
-    p 'done 4 times hours'
+    p 'done hours'
   end
-  p 'done days'
+  p 'done 4 times hours'
+end
+p 'done days'
 end
 p 'done 3 times day'
 
