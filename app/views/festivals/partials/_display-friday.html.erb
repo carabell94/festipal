@@ -7,11 +7,11 @@
         <h3 class='display-day-of-week text-dark'><%= stage.name %></h3>
         <% stage.schedules.where(day: 'Friday').each do |concert| %>
           <% if concert.end_time == 24 %>
-            <%= link_to schedule_user_schedules_path(concert), class: "lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
+            <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
              <p><%= concert.artist %>  <%= concert.start_time %>.00 - 00.00</p>
             <% end %>
             <% else %>
-              <%= link_to schedule_user_schedules_path(concert), class: "lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
+              <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
                 <p><%= concert.artist %>  <%= concert.start_time %>.00 - <%= concert.end_time %>.00</p>
                 <% end %>
             <% end %>
