@@ -1,2 +1,16 @@
 <p class='display-day-of-week'>Friday</p>
+
 <p class='display-day-of-week'> Testing </p>
+<p class= 'display-day-of-week'>
+<%= @festival.name %>
+</p>
+
+<% @festival.stages.each do |stage| %>
+  <p><%= stage.name %></p>
+  <% stage.schedules.each do |concert| %>
+    <p><%= concert.artist %></p>
+    <p><%= concert.start_time %></p>
+    <p><%= concert.end_time %></p>
+  <% end %>
+<% end %>
+
