@@ -25,15 +25,9 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-<div class="menu1 sub-navbar">
-    <li class="color-white"><%= link_to "Festival Info", root_path, class: "active color-white" %></li>
-    <li class="color-white"><%= link_to "My FestiPal", festival_schedule_path(:festival_id, :id) %></li>
-=======
 <div class="menu1">
     <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: "active" %></li>
     <li><%= link_to "My FestiPal", festival_schedule_path(@festival || Festival.first, :id) %></li>
->>>>>>> 95f3876860fd18158a3cf9ddf64871042cec8495
     <li class="slide"></li>
 </div>
 

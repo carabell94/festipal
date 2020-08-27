@@ -1,0 +1,9 @@
+.disabled-lineup {
+  cursor: not-allowed;
+  color: red;
+  &:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+
