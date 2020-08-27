@@ -1,0 +1,78 @@
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 300px;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 300px;
+}
+// div wrap the whole carousel
+.wrapper {
+width: 90%;
+margin: 0 auto;
+padding-bottom: 1px;
+
+@media (max-width: 540px) {
+  width: 90%;
+}
+}
+// -------------------------------
+// outter div containing insta logo and background
+.outside-wrapper {
+  background: url('insta-background.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 30%;
+  border-radius: 10px;
+  text-align: center;
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+}
+
+.insta-logo {
+  width: 300px;
+  padding: 20px;
+}
+// ------------------------------------------------
+.carousel-control-prev {
+  opacity: 1!important;
+}
+
+.carousel-control-next {
+  opacity: 1!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
