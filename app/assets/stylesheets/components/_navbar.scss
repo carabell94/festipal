@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #C6A2BB;
+
+  .nav-link {
+  color: white!important;
+  font-family: 'comfortaa';
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

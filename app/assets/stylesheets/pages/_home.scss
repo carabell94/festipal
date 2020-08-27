@@ -5,7 +5,7 @@
   min-height: calc(100vh - 210px);
 }
 
-#home-banner {
+.home-banner {
   background-image: url("silhouette.jpg");
   background-size: cover;
   background-position: center;
@@ -15,27 +15,63 @@
   align-items: center;
 
   h4 {
-    font-family: 'comfortaa', serif;
+    font-family: electronicadisplay, serif;
     color: white;
-    padding-top: 32px;
+    // padding-top: 32px;
     padding-bottom: 32px;
     font-size: 32px;
 
     @media (max-width: 540px) {
-      padding-top: 56px;
+      // padding-top: 56px;
       padding-bottom: 24px;
       font-size: 24px;
+      padding-top: 12px;
     }
+  }
 
+  h3 {
+    font-family: electronicadisplay, serif;
+    color: white;
+    font-size: 24px;
+
+
+    @media (max-width: 540px) {
+    padding-top: 32px;
+    }
+  }
+
+  p {
+    color: white;
+    font-family: 'comfortaa';
+
+
+    @media (max-width: 540px) {
+      margin-bottom: 0px;
+      font-size: 12px;
+    }
   }
 }
 
-.form-control {
-  background-color: #90b1eb;
+.homepage-go {
+  margin-top: 8px;
+}
+
+.festipal-steps {
+  margin-bottom: 0px;
+  margin-top: 4px;
+  background-color: #c4a0b9b3;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+#search_id {
+  background-color: #665b8a;
   color: white;
   // border: 1px solid white;
   box-shadow: 0 0 8px ;
   width: 35vw;
+  border: none;
+  border-radius: 5px;
 
 
   input: focus {

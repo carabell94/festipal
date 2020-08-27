@@ -23,7 +23,7 @@
 
     <%= link_to omniauth_authorize_path(resource_name, provider), class: "btn btn-lg btn-primary rounded-pill" do  %>
       <%= content_tag :i, "", class: "fab fa-facebook-f" %>
-      <%= content_tag :span, "Sing in with #{OmniAuth::Utils.camelize(provider)}", class: "pl-3" %>
+      <%= content_tag :span, "Sign in with #{OmniAuth::Utils.camelize(provider)}", class: "pl-3" %>
     <% end %>
   <% end %>
 <% end %>

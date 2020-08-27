@@ -18,7 +18,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link login-btn" %>
         </li>
       <% end %>
     </ul>
@@ -26,9 +26,8 @@
 </div>
 
 <div class="menu1">
-    <li><%= link_to "Festival Info", root_path %></li>
-    <li><%= link_to "My FestiPal", root_path %></li>
-    <li><%= link_to "Highlights", root_path, class: "active" %></li>
+    <li><%= link_to "Festival Info", root_path, class: "active" %></li>
+    <li><%= link_to "My FestiPal", festival_schedule_path(:festival_id, :id) %></li>
     <li class="slide"></li>
 </div>
 

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: electronicadisplay;
+  src: url("electronicadisplay.otf");
+  }
+
+.festival-name {
+  font-family: electronicadisplay, sans-serif;
+  margin-top: 0px;
+  color: white;
+}
+
+.show-page {
+  background-image: url("silhouette.jpg");
+  background-size: cover;
+  position-position: center;
+  height: 100vh;
+
+// 'Change Day' Dropdown Styling - Fri/Sat/Sun
+  .dropdown-menu.show {
+    background-color: #c4a0b9!important;
+  }
+
+  .nav-item.dropdown.show {
+
+    .dropdown-toggle {
+    background-color: #c4a0b9!important;
+    color: white;
+    }
+  }
+}
+
+// 'Change Day' Dropdown Styling
+.nav-link.dropdown-toggle {
+  border: 1px solid white;
+}
+
+.display-day-of-week {
+  color: white;
+  text-align: center;
+  padding-top: 4px;
+  font-family: electronicadisplay;
+}
+
+
+

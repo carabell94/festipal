@@ -1,12 +1,17 @@
-<h1 class="text-center mt-3"><%= @festival.name %></h1>
+<div class="show-page">
+  <h1 class="text-center pt-3 festival-name"><%= @festival.name %></h1>
+  <%= render 'festivals/partials/show-tabs' %>
 
+  <!-- 3 PARTIALS, toggle between tabs (buttons that appear as tabs) -->
+  <!-- Code html, then use javascript for eventlisteners to render something dependent on the click -->
+  <!-- Info -->
+  <!-- Map -->
+  <!-- Highlights -->
 
-<!-- 3 PARTIALS, toggle between tabs (buttons that appear as tabs) -->
-<!-- Code html, then use javascript for eventlisteners to render something dependent on the click -->
-<!-- Info -->
-<!-- Map -->
-<!-- Highlights -->
-<a class="twitter-timeline" data-width="340" data-height="520" data-theme="dark" href="https://twitter.com/glastonbury?ref_src=twsrc%5Etfw">Tweets by Glastonbury</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- <a class="twitter-timeline" data-width="340" data-height="520" data-theme="dark" href="https://twitter.com/glastonbury?ref_src=twsrc%5Etfw">Tweets by Glastonbury</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+   -->
 
   <%= render 'pages/partials/instagram' %>
 
+  <!-- if statement to display the information of the selected festival -->
+</div>
