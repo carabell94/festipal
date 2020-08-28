@@ -1,4 +1,4 @@
-<p class='display-day-of-week'>Sunday</p>
+<span class="name-artist"><%= concert.artist %></span><p class='display-day-of-week'>Sunday</p>
 <div class="container">
   <div class="row">
     <% @festival.stages.each do |stage| %>
@@ -7,11 +7,11 @@
         <% stage.schedules.where(day: 'Sunday').each do |concert| %>
           <% if concert.end_time == 24 %>
             <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
-             <p><%= concert.artist %>  <%= concert.start_time %>.00 - 00.00</p>
+             <p><span class="name-artist"><%= concert.artist %></span>  <%= concert.start_time %>.00 - 00.00</p>
             <% end %>
             <% else %>
               <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
-                <p><%= concert.artist %>  <%= concert.start_time %>.00 - <%= concert.end_time %>.00</p>
+                <p><span class="name-artist"><%= concert.artist %></span>  <%= concert.start_time %>.00 - <%= concert.end_time %>.00</p>
               <% end %>
             <% end %>
         <% end %>
