@@ -1,3 +1,2 @@
 document.querySelector('.display-day').innerHTML = "";
-document.querySelector('.display-day').insertAdjacentHTML('beforeend', `<p class='display-day-of-week'>Sunday</p>`);
-
+document.querySelector('.display-day').insertAdjacentHTML('beforeend', `<%= render 'festivals/partials/display-sunday', festival: @festival %>`);

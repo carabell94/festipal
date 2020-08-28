@@ -18,10 +18,12 @@ class FestivalsController < ApplicationController
   end
 
   def display_saturday
+    @festival = Festival.find(params[:festival])
     render :display_saturday
   end
 
   def display_sunday
+    @festival = Festival.find(params[:festival])
     render :display_sunday
   end
 
