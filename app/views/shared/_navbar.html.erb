@@ -25,9 +25,15 @@
   </div>
 </div>
 
+<!-- SUB NAVBAR -->
 <div class="menu1">
+  <%= simple_form_for :search, url: find_festival_path, method: 'get' do |f| %>
+  <%= f.select :id, options_from_collection_for_select(Festival.all, "id", "name"), label: false, prompt: 'Change Festival' %>
+  <% end %>
+
     <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: "active" %></li>
     <li><%= link_to "My FestiPal", festival_schedule_path(@festival || Festival.first, :id) %></li>
     <li class="slide"></li>
+
 </div>
 
