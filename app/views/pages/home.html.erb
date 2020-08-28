@@ -1,5 +1,6 @@
-<%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, id: "myVideo" %>
+
 <div class="home-banner text-center">
+  <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, id: "myVideo" %>
   <br>
   <br>
   <h3 class="anime">FestiPal takes the stress out of your festival experience.</h3>
@@ -8,33 +9,26 @@
 
 
   <br>
-      <h3 id="demo"></h3>
-
-  <h4 class='text-center mt-3'>Ready to get started?</h4>
-  <%= render 'pages/partials/initial_dropdown' %>
-
+  <div class="css-typing">
+  <h3>
+    1 Choose your festival
+  </h3>
+  <h3>
+    2 Check out the lineup
+  </h3>
+  <h3>
+    3 Start building your FestiPlan
+  </h3>
 </div>
+  <br>
+  <br>
+  <br>
+  <h4 class='text-center mt-3'>Ready to get started?</h4>
+  <br>
+  <br>
+  <%= render 'pages/partials/initial_dropdown' %>
+  <br>
+  <br>
+  <br>
 
-
-<script>
-  var i = 0;
-  var txt = "1. Choose your festival 2. Check out the lineup 3. Start building your FestiPlan";
-  var speed = 80;
-
-  function typeWriter() {
-    if (i < txt.length) {
-      document.getElementById("demo").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-  window.onload = typeWriter();
-</script>
-
-
-
-
-
-
-
-
+</dih3>
