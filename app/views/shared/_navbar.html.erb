@@ -27,9 +27,15 @@
 
 <!-- SUB NAVBAR -->
 <div class="menu1">
- <!--  <%= simple_form_for :search, url: find_festival_path, method: 'get' do |f| %>
-  <%= f.select :id, options_from_collection_for_select(Festival.all, "id", "name"), { label: false, prompt: 'Change Festival', onchange: 'this.form.submit();' } %>
-  <% end %> --> <!-- NEED TO FIX THIS FOR FINAL DEMO -->
+
+  <form novalidate="novalidate" class="simple_form search" action="/find_festival" accept-charset="UTF-8" method="get">
+    <select label="false" prompt="Change Festival" onchange="this.form.submit();" name="search[id]" id="search_id">
+      <option value="" disabled selected>Change Festival</option>
+      <option value="1">Glastonbury</option>
+      <option value="2">Boomtown</option>
+      <option value="3">Wilderness</option>
+    </select>
+  </form>
 
     <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: " #{'active' if params[:controller] == 'festivals' && params[:action] == 'show'}" %></li>
     <li><%= link_to "My FestiPal", festival_schedule_path(@festival || Festival.first, :id), class: " #{'active' if params[:controller] == 'schedules' && params[:action] == 'show'}" %></li>
