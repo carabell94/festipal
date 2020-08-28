@@ -1,7 +1,7 @@
 require 'faker'
 
 glas_stage = ['Pyramid Stage', 'The Park', 'Acoustic Stage', 'Arcadia']
-boom_stage = ["Lio's Den", "Town Center", "Nucleus Stage", "RELIC"]
+boom_stage = ["Lion's Den", "Town Center", "Nucleus Stage", "RELIC"]
 wild_stage = ['Main Stage', 'The Level', 'The Jumpyard', 'The Valley']
 all = [glas_stage, boom_stage, wild_stage]
 
