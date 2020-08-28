@@ -1,13 +1,13 @@
 require 'faker'
 
 glas_stage = ['Pyramid Stage', 'The Park', 'Acoustic Stage', 'Arcadia']
-boom_stage = ["Lio's Den", "Town Center", "Nucleus Stage", "RELIC"]
+boom_stage = ["Lion's Den", "Town Center", "Nucleus Stage", "RELIC"]
 wild_stage = ['Main Stage', 'The Level', 'The Jumpyard', 'The Valley']
 all = [glas_stage, boom_stage, wild_stage]
 
 glastonbury = Festival.create(name: 'Glastonbury', start_date: '28/08/2020', end_date: '30/08/2020')
 
-boomtown = Festival.create(name: 'Boomtown', start_date: '04/09/2020', end_date: '06/09/2020')
+boomtown = Festival.create(name: 'Boomtown Fair', start_date: '04/09/2020', end_date: '06/09/2020')
 
 wilderness = Festival.create(name: 'Wilderness', start_date: '11/09/2020', end_date: '13/09/2020')
 
