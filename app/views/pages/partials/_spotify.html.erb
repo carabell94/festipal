@@ -3,13 +3,13 @@
 <!-- wilderness -->
 
 
-<!-- Glastonbury -->
 <% if @festival.name == 'Glastonbury' %>
-<iframe src="https://open.spotify.com/embed/playlist/2eA7Dku17ewm0VboGFVDd6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-<!-- Boomtown -->
+<!-- Glastonbury -->
+  <iframe src="https://open.spotify.com/embed/playlist/2eA7Dku17ewm0VboGFVDd6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <% elsif @festival.name == 'Boomtown' %>
-<iframe src="https://open.spotify.com/embed/playlist/79NxMdGLZlsAbJpd1mc7bH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" class="spotify"></iframe>
-<!-- Wilderness -->
+<!-- Boomtown -->
+  <iframe src="https://open.spotify.com/embed/playlist/79NxMdGLZlsAbJpd1mc7bH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" class="spotify"></iframe>
 <% else %>
-<iframe src="https://open.spotify.com/embed/playlist/3kexrOwHFijF3KMnvaNEFX" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<!-- Wilderness -->
+  <iframe src="https://open.spotify.com/embed/playlist/3kexrOwHFijF3KMnvaNEFX" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <% end %>
