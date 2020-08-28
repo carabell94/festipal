@@ -38,6 +38,7 @@
     }
   }
 
+  // FestiPal Takes The Stress Out Of Your Festival Experience
   h3 {
     font-family: electronicadisplay, serif;
     color: white;
@@ -99,49 +100,50 @@ select {
    -moz-text-align-last: center;
 }
 
-@keyframes text {
-  0% {
-    opacity: 0.2;
-  }
-  10% {
-    opacity: 0.25;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  30% {
-    opacity: 0.4;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  50% {
-    letter-spacing: 0;
-  }
-  60% {
-    opacity: 0.6;
-  }
+// @keyframes text {
+//   0% {
+//     opacity: 0.2;
+//   }
+//   10% {
+//     opacity: 0.25;
+//   }
+//   20% {
+//     opacity: 0.3;
+//   }
+//   30% {
+//     opacity: 0.4;
+//   }
+//   40% {
+//     opacity: 0.5;
+//   }
+//   50% {
+//     letter-spacing: 0;
+//   }
+//   60% {
+//     opacity: 0.6;
+//   }
 
-  70% {
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 1;
-  }
-}
+//   70% {
+//     opacity: 0.8;
+//   }
+//   80% {
+//     opacity: 0.9;
+//   }
+//   90% {
+//     opacity: 1;
+//   }
+// }
 // -------------------------------------
 // typing animation pure CSS
 
 .css-typing h3 {
   border-right: .15em solid rgb(211,187,204);
   font-family: electronicadisplay, serif;
-  font-size: 20px;
+  font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 8px auto;
+  color: white;
   padding: 0;
 }
 .css-typing h3:nth-child(1) {
