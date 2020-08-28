@@ -41,6 +41,8 @@ background-color: lightgrey;
   text-align: center;
   width: 100%;
   background-color: #d3bbcc;
+  display: flex;
+  font-size: 12px;
 
   .active {
    color: white;
@@ -54,6 +56,7 @@ background-color: lightgrey;
   color: black;
   line-height: 40px;
   padding: 6px 20px;
+  margin-left: 8px;
   transition: 0.5s;
 }
 
@@ -63,6 +66,27 @@ background-color: lightgrey;
 
 .sub-navbar {
   font-size: 12px;
+}
+
+#search_id2 {
+  background-color: #d3bbcc;
+  color: black;
+  // box-shadow: 0 0 8px ;
+  width: 125px !important;
+  border: 1px dotted black;
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+
+  input: focus {
+    outline: #90b1eb;
+  }
+
+  // @media (max-width: 540px) {
+  //   width: 60vw;
+  // }
 }
 
 
