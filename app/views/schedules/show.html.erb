@@ -5,13 +5,14 @@
 
 <div class="wrapper">
   <div class="schedule text-center">
-     <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
+    <div class="schedule-header">
+     <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p></div>
     <% current_user.user_schedules.each do |concert| %>
       <% if concert.schedule.stage.festival.name == @festival.name %>
         <% if concert.schedule.end_time == 24 %>
-            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.festival.name %> <%= concert.schedule.start_time %>.00 - 00.00</p>
+            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.name %> <%= concert.schedule.start_time %>.00 - 00.00</p>
           <% else %>
-            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.festival.name %> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
+            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.name %> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
           <% end %>
         <% end %>
       <% end %>
@@ -20,7 +21,10 @@
 
 <div class="wrapper">
   <div class="suggestions text-center">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dolor quam tempora minus obcaecati porro provident error quasi nulla sint rerum tempore cum dolorem alias vel soluta voluptatum explicabo, sunt dicta.</p>
+    <div class="suggestions-header"
+    <h2>Suggestions</h2></div>
+    <br>
+    <p>Suggestions based on the gaps in your schedule will be populated here for you to select if desired.</p>
   </div>
 </div>
 
