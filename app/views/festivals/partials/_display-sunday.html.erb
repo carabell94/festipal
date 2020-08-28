@@ -1,5 +1,4 @@
 <p class='display-day-of-week'>Sunday</p>
-
 <div class="container">
   <div class="row">
     <% @festival.stages.each do |stage| %>
@@ -10,16 +9,10 @@
             <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
              <p><%= concert.artist %>  <%= concert.start_time %>.00 - 00.00</p>
             <% end %>
-            <div hidden id="show-alert" class="alert alert-primary" role="alert">
-              You have selected <%= concert.artist %>!
-            </div>
             <% else %>
               <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
                 <p><%= concert.artist %>  <%= concert.start_time %>.00 - <%= concert.end_time %>.00</p>
               <% end %>
-              <div hidden id="show-alert" class="alert alert-primary" role="alert">
-                You have selected <%= concert.artist %>!
-              </div>
             <% end %>
         <% end %>
       </div>
@@ -27,5 +20,7 @@
   </div>
 </div>
 
+<div hidden id="show-alert" class="alert alert-primary" role="alert">
 
+</div>
 
