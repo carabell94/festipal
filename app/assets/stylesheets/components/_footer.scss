@@ -3,6 +3,7 @@
   padding: 10px;
   background-color: #1f292f !important;
   flex-wrap: wrap;
+  width: 100%;
   p {
     color: white;
 
@@ -22,7 +23,7 @@
   margin-top: 16px;
 
   @media (max-width: 540px) {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 0px;
   }
 

@@ -41,6 +41,10 @@ background-color: lightgrey;
   text-align: center;
   width: 100%;
   background-color: #d3bbcc;
+
+  .active {
+   color: white;
+  }
 }
 
 
@@ -61,7 +65,5 @@ background-color: lightgrey;
   font-size: 12px;
 }
 
-.active.color-white {
-   color: white;
-}
+
 
