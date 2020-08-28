@@ -7,10 +7,12 @@
   <div class="schedule text-center">
      <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
     <% current_user.user_schedules.each do |concert| %>
-      <% if concert.schedule.end_time == 24 %>
-          <p><%= concert.schedule.artist %>  <%= concert.schedule.start_time %>.00 - 00.00</p>
-        <% else %>
-          <p><%= concert.schedule.artist %>  <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
+      <% if concert.schedule.stage.festival.name == @festival.name %>
+        <% if concert.schedule.end_time == 24 %>
+            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.festival.name %> <%= concert.schedule.start_time %>.00 - 00.00</p>
+          <% else %>
+            <p><%= concert.schedule.artist %> <%= concert.schedule.stage.festival.name %> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
+          <% end %>
         <% end %>
       <% end %>
   </div>

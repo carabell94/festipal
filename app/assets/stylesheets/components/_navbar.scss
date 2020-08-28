@@ -3,26 +3,23 @@
   background: #C6A2BB;
 
   .nav-link {
-  color: white!important;
+  color: black!important;
   font-family: 'comfortaa';
   }
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-// .img-wrap {
-//   margin: 0 auto;
-//   padding-left: 56px;
-// }
 
 .navbar-lewagon .navbar-brand img {
   width: 100px;
 }
 .dropdown-menu {
   border-radius: 5px;
-  background-color: rgba(197, 162, 187, .4);
+  background-color: #c6a1bc;
   padding: 0;
   margin: 5px 0;
 }
@@ -43,7 +40,7 @@ background-color: lightgrey;
   height: 40px;
   text-align: center;
   width: 100%;
-  background-color: rgba(197, 162, 187, .7);
+  background-color: #d3bbcc;
 }
 
 
@@ -58,5 +55,13 @@ background-color: lightgrey;
 
 .menu1 li {
   display: inline;
+}
+
+.sub-navbar {
+  font-size: 12px;
+}
+
+.active.color-white {
+   color: white;
 }
 

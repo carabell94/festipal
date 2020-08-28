@@ -2,8 +2,7 @@
   text-align: center;
   padding: 10px;
   background-color: #1f292f !important;
-    flex-wrap: wrap;
-
+  flex-wrap: wrap;
   p {
     color: white;
 
@@ -122,11 +121,12 @@ ul li.list:nth-child(4) span {
 
 .extra-links {
   margin: 0 auto;
+  // padding-right: 60px;
 }
 
 .extra-links ul {
   display: block;
-  padding: 5px;
+  // padding: 5px;
 }
 
 .extra-links li {
@@ -138,7 +138,9 @@ ul li.list:nth-child(4) span {
     text-align: center;
   }
 }
-
+.second {
+  margin-right: 120px;
+}
 
 
 
