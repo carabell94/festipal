@@ -1,12 +1,24 @@
+ // need to fix the video to display properly on phone
+ #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
 
-
+.anime {
+  animation: text 3s 1;
+  font-size: 30px!important;
+}
 
 .min-height {
   min-height: calc(100vh - 210px);
 }
 
 .home-banner {
-  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg");
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  // background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -91,22 +103,37 @@ select {
    -moz-text-align-last: center;
 }
 
-//  /* For a screen < 960px, this CSS will be read */
-// @media (max-width: 960px) {
-//   .min-height {
-//   min-height: calc(100vh - 210px);
-//   }
-// }
+@keyframes text {
+  0% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  50% {
+    letter-spacing: 0;
+  }
+  60% {
+    opacity: 0.6;
+  }
 
-//   /* For a screen < 720px, this CSS will be read */
-// @media (max-width: 720px) {
-//   .min-height {
-//     min-height: calc(100vh - 210px);
-//   }
-// }
-//   /* For a screen < 540px, this CSS will be read */
-// @media (max-width: 540px) {
-//   .min-height {
-//     min-height: calc(100vh - 210px);
-//   }
-// }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
