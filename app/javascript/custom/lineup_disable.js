@@ -34,7 +34,7 @@ const disableLink = () => {
     });
   };
   const showAlert = (alert, artist) => {
-    alert.innerText = `You have selected ${artist.innerText}!`
+    alert.innerText = `You have added ${artist.innerText} to your FestiPlan!`
     alert.removeAttribute('hidden');
     setTimeout(function(){
       console.log(alert);

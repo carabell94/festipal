@@ -4,6 +4,9 @@
   background-color: #1f292f !important;
   flex-wrap: wrap;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+
   p {
     color: white;
 
@@ -23,7 +26,7 @@
   margin-top: 16px;
 
   @media (max-width: 540px) {
-    font-size: 14px;
+    font-size: 8px;
     margin-top: 0px;
   }
 
@@ -118,6 +121,11 @@ ul li.list:nth-child(4) span {
 .footer-img {
   width: 250px!important;
   padding-bottom: 20px;
+
+  @media (max-width: 540px) {
+    width: 110px !important;
+    padding-bottom: 4px;
+  }
 }
 
 .extra-links {
