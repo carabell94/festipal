@@ -5,9 +5,9 @@
       <!-- <a class="dropdown-item" href="/display_friday" remote="true" method="get">Friday</a> -->
       <%= link_to 'Friday', display_friday_path(festival: festival), remote: true, method: :get, class: "dropdown-item dropdown-button" %>
       <!-- <a class="dropdown-item" href="/display_saturday" remote="true" method="get">Saturday</a> -->
-      <%= link_to 'Saturday', display_saturday_path, remote: true, method: :get, class: "dropdown-item dropdown-button" %>
+      <%= link_to 'Saturday', display_saturday_path(festival: festival), remote: true, method: :get, class: "dropdown-item dropdown-button" %>
       <!-- <a class="dropdown-item" href="/display_sunday" remote="true" method="get">Sunday</a> -->
-      <%= link_to 'Sunday', display_sunday_path, remote: true, method: :get, class: "dropdown-item dropdown-button" %>
+      <%= link_to 'Sunday', display_sunday_path(festival: festival), remote: true, method: :get, class: "dropdown-item dropdown-button" %>
     </div>
   </li>
 </ul>
