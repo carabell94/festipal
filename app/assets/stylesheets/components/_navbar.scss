@@ -56,13 +56,15 @@ background-color: lightgrey;
   color: black;
   line-height: 40px;
   padding: 6px 20px;
-  margin-left: 8px;
   transition: 0.5s;
+
+  @media (max-width: 540px) {
+  }
 }
 
 .menu1 li {
   display: inline;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .sub-navbar {
@@ -92,6 +94,10 @@ background-color: lightgrey;
 
 .centring-subnav-headers {
   margin: 0 auto;
+
+  @media (max-width: 540px) {
+    margin: 0;
+  }
 }
 
 
