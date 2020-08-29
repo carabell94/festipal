@@ -20,12 +20,14 @@
 
 
 #authors {
-  font-size: 12px;
+  font-size: 8px;
+  margin: 0;
+  padding-bottom: 4px;
   margin-top: 16px;
 
   @media (max-width: 540px) {
     font-size: 8px;
-    margin-top: 0px;
+    margin-top: 4px;
   }
 
   a {
@@ -47,11 +49,11 @@ ul li.list {
   list-style-type: none;
   width: 40px;
   height: 40px;
-  margin: 0 30px;
+  margin: 0 10px;
   transform: rotate(-30deg) skew(25deg);
 
    @media (max-width: 540px) {
-    margin: 4px 4px 4px 12px;
+    margin: 0px 2px 0px 12px;
     }
 }
 
@@ -59,15 +61,15 @@ ul li span {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   background: #000;
   transition: 0.5s;
   display: flex!important;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 20px!important;
+  font-size: 16px!important;
 
   @media (max-width: 540px) {
     font-size: 10px !important;
@@ -125,8 +127,8 @@ ul li.list:nth-child(4) span {
 }
 
 .footer-img {
-  width: 250px!important;
-  padding-bottom: 20px;
+  width: 115px!important;
+  padding-bottom: 12px;
 
   @media (max-width: 540px) {
     width: 110px !important;
@@ -149,6 +151,7 @@ ul li.list:nth-child(4) span {
   font-size: 18px;
   list-style: none;
   text-align: left;
+
   @media (max-width: 540px) {
     text-align: center;
   }

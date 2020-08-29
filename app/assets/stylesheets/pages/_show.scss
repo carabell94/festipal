@@ -31,6 +31,11 @@
 // 'Change Day' Dropdown Styling
 .nav-link.dropdown-toggle {
   border: 1px solid white;
+  margin-bottom: 16px;
+
+  @media (max-width: 540px) {
+    margin-bottom: 0;
+  }
 }
 
 .display-day-of-week {
@@ -43,6 +48,19 @@
 .comfortaa-font {
   font-family: 'comfortaa'!important;
   font-size: 12px;
+}
+
+#search_id2 option {
+  background-color: #c4a0b9;
+}
+
+.name-artist {
+  color: #343a40 !important;
+}
+
+.colored-time {
+  color: #07377e !important;
+  font-weight: bold;
 }
 
 

@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-.string {
+label.string, label.email, label.password, .form-text.text-muted {
   color: white;
 }
 
@@ -35,17 +35,9 @@
 }
 
 
-.email {
-  // color: white;
-}
-
 .header2 {
   color: white;
   font-size: 24px;
-}
-
-.password {
-  // color: white;
 }
 
 .container {
