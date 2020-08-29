@@ -34,11 +34,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <!-- <div class="min-height"> -->
+    <div class="min-height">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
       <%= yield %>
-    <!-- </div> -->
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

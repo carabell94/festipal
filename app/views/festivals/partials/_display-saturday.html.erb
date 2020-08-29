@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row scroll-div">
     <% @festival.stages.each do |stage| %>
-      <div class="col-12 col-md-6 bg-white">
+      <div class="col-12 col-md-6 rounded-corners">
         <h3 class='display-day-of-week text-dark'><%= stage.name %></h3>
         <% stage.schedules.where(day: 'Saturday').each do |concert| %>
           <% if concert.end_time == 24 %>
