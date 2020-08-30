@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     resources :schedules, only: [:index, :show, :create, :update, :destroy]
   end
   resources :schedules, only: [] do
-    resources :user_schedules, only: [:create]
+    resources :user_schedules, only: [:create, :destroy]
   end
 end
