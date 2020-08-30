@@ -10,6 +10,12 @@ class UserSchedulesController < ApplicationController
       # flash[:notice] = "Event added successfully!"
 
     end
+  end
+
+  def destroy
+    @user_schedule = UserSchedule.find(params[:schedule_id])
+    @user_schedule.destroy
     # raise
+    redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival)
   end
 end
