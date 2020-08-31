@@ -26,5 +26,4 @@ class FestivalsController < ApplicationController
     @festival = Festival.find(params[:festival])
     render :display_sunday
   end
-
 end

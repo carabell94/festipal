@@ -9,9 +9,12 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <% avatar_url = current_user.facebook_picture_url || "avatar2.jpg" %>
-          <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <% avatar_url = current_user.facebook_picture_url || "avatar2.jpg" %>
+            <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
@@ -23,25 +26,5 @@
       <% end %>
     </ul>
   </div>
-</div>
-
-<!-- SUB NAVBAR -->
-<div class="menu1">
-
-  <form novalidate="novalidate" class="simple_form search navbar-change-festival" action="/find_festival" accept-charset="UTF-8" method="get">
-    <select label="false" prompt="Change Festival" onchange="this.form.submit();" name="search[id]" id="search_id2" class="select">
-      <option value="" disabled selected>Change Festival</option>
-      <option value="1" class="styling-navbar-dropdown">Glastonbury</option>
-      <option value="2" class="styling-navbar-dropdown">Boomtown</option>
-      <option value="3" class="styling-navbar-dropdown">Wilderness</option>
-    </select>
-  </form>
-
-  <div class="centring-subnav-headers">
-    <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: " #{'active' if params[:controller] == 'festivals' && params[:action] == 'show'}" %></li>
-    <li><%= link_to "My FestiPlan", festival_schedule_path(@festival || Festival.first, :id), class: " #{'active' if params[:controller] == 'schedules' && params[:action] == 'show'}" %></li>
-    <!-- <li class="slide"></li> -->
-  </div>
-
 </div>
 

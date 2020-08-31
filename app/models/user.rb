@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :schedules, through: :user_schedules
   validates :first_name, presence: true
   validates :last_name, presence: true
+  has_one_attached :photo
 
 
   def self.find_for_facebook_oauth(auth)

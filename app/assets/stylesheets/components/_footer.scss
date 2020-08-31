@@ -4,6 +4,8 @@
   background-color: #1f292f !important;
   flex-wrap: wrap;
   width: 100%;
+  position: fixed;
+  bottom: 0;
 
   p {
     color: white;
@@ -54,10 +56,13 @@ ul li.list {
 
    @media (max-width: 540px) {
     margin: 0px 2px 0px 12px;
+    width: 25px;
+    height: 25px;
     }
 }
 
 ul li span {
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +116,7 @@ ul li.list:nth-child(2) span {
 }
 
 ul li.list:nth-child(3) span {
-  background: #BA1C7C;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 
 }
 
@@ -131,7 +136,7 @@ ul li.list:nth-child(4) span {
   padding-bottom: 12px;
 
   @media (max-width: 540px) {
-    width: 110px !important;
+    width: 75px !important;
     padding-bottom: 4px;
   }
 }
@@ -160,6 +165,13 @@ ul li.list:nth-child(4) span {
   margin-right: 120px;
 }
 
+.height-144 {
+  height: 144px;
+
+  @media (max-width: 540px) {
+    height: 91px;
+  }
+}
 
 
 
