@@ -4,6 +4,8 @@
   background-color: #1f292f !important;
   flex-wrap: wrap;
   width: 100%;
+  position: fixed;
+  bottom: 0;
 
   p {
     color: white;
@@ -160,6 +162,13 @@ ul li.list:nth-child(4) span {
   margin-right: 120px;
 }
 
+.height-144 {
+  height: 144px;
+
+  @media (max-width: 540px) {
+    height: 118px;
+  }
+}
 
 
 
