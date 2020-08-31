@@ -1,15 +1,16 @@
 class UserSchedulesController < ApplicationController
   def create
     if Schedule.find(params[:schedule_id]).user_schedules.where(user: current_user) != []
-      # redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
-      # flash[:notice] = "Already selecte!!!!!!!!!!!!"
     else
       @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
       @user_schedule.save
-      # redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
-      # flash[:notice] = "Event added successfully!"
-
     end
+    redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
+    # if # u are in festiplan redirect to same page
+
+    # elsif #if u are in lineup stay there
+
+    # end
   end
 
   def destroy
