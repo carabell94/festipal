@@ -44,6 +44,13 @@ h2 {
 }
 
 .wrapper {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+
+  @media (max-width: 540px) {
+width: 100%;
+  }
+
+
+
 }
