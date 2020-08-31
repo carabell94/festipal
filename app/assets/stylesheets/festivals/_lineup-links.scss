@@ -1,5 +1,6 @@
 .lineup {
   font-size: 1rem;
+  color: #343a40;
   &:hover {
     text-decoration: none;
   }
@@ -11,10 +12,10 @@
 
 .disabled-lineup {
   cursor: none;
-  color: #c6a1bc;
+  color: #c6a1bc !important;
   &:hover {
     text-decoration: none;
-    color: #c6a1bc;
+    color: #c6a1bc !important;
   }
 }
 

@@ -10,7 +10,6 @@
 }
 
 .festipal-container {
-  // margin: 20px auto;
   width: 100%;
   background:url('https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg');
   text-align: center;
@@ -18,7 +17,6 @@
   background-position: center;
   padding-top: 30px;
   color: white;
-  height: 100vh;
 }
 
 h1 {
@@ -36,15 +34,16 @@ h2 {
 
 .suggestions {
   background: rgba(255, 255, 255, 0.75);
-  height: 200px;
+  height: 300px;
   width: 100%;
   margin-top: 20px;
-  // margin-top: 20px auto;
   padding: 20px;
   border-radius: 5px;
+  // overflow-y: scroll;
+
 }
 
 .wrapper {
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
 }

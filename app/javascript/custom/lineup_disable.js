@@ -2,9 +2,7 @@
 const disableLink = () => {
   console.log("calling the function");
 
-
   const buttons = document.querySelectorAll('.dropdown-button');
-
 
   if (buttons) {
     buttons.forEach((button) => {
@@ -25,11 +23,10 @@ const disableLink = () => {
               const artist = event.currentTarget.querySelector('.name-artist');
 
               link.classList.add('disabled-lineup');
-            showAlert(alert, artist);
+              showAlert(alert, artist);
+              });
             });
-          });
         }, 1000);
-
       });
     });
   };
