@@ -87,9 +87,9 @@ background-color: lightgrey;
     outline: #d3bbcc;
   }
 
-  // @media (max-width: 540px) {
-  //   width: 60vw;
-  // }
+  @media (max-width: 540px) {
+    width: 60vw;
+  }
 }
 
 .centring-subnav-headers {

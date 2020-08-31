@@ -47,7 +47,7 @@
       <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>
     <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>
     <%=  %>
-    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post %>
+    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post, remote: true %>
       </p>
     <% end %>
 
@@ -58,4 +58,5 @@
 
 </div>
 </div>
+
 

@@ -4,9 +4,12 @@ class UserSchedulesController < ApplicationController
     else
       @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
       @user_schedule.save
-      # redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
       # flash[:notice] = "Event added successfully!"
     end
+    redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival, @user_schedule.schedule)
+    # respond_to do |format|
+    #   format.js { render inline: "location.reload();" }
+    # end
   end
 
   def destroy
