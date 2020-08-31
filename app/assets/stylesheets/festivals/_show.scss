@@ -51,4 +51,27 @@
   border-radius: 10px;
 }
 
+.highlights-p-tag {
+  font-family: 'comfortaa', serif;
+
+  @media (max-width: 540px) {
+    font-size: 10px;
+  }
+}
+
+.social-highlight-card {
+
+  @media (max-width: 540px) {
+    margin-bottom: 16px;
+    width: 80vw;
+  }
+}
+
+.social-card-wrapper {
+
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
