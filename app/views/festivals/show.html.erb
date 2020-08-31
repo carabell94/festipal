@@ -1,11 +1,14 @@
 <!-- DON'T DELETE, META INFO -->
 <% content_for :meta_title, "#{@festival.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<br>
 <% content_for :meta_description, @festival.start_date %>
-
+<br>
 <div class="show-page">
   <h1 class="text-center pt-3 festival-name"><%= @festival.name %></h1>
 
    <div class="text-center pt-3 festival-name">
+    <br>
+    <br>
       <%= render 'festivals/partials/show-tabs', festival: @festival  %>
     </div>
 
