@@ -8,8 +8,8 @@ class UserSchedulesController < ApplicationController
       @user_schedule.save
       # redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
       # flash[:notice] = "Event added successfully!"
-
     end
+
   end
 
   def destroy
