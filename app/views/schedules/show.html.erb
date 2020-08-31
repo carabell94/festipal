@@ -43,12 +43,17 @@
     <div class="suggestions-header">
       <h2><%= current_user.first_name %>'s Suggestions</h2>
     </div class="suggestions-container">
+
+
     <% @suggestions.each do |suggestion| %>
       <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
     <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00
     <%=  %>
-    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post, remote: true %>
-      </p>
+
+    <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
+      <i class="fas fa-plus"></i>
+      <% end %></p>
+
     <% end %>
 
     <p>Suggestions based on available artists be populated here for you to select if desired.</p>
