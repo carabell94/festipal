@@ -9,7 +9,7 @@
       <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
     </div>
     <div class="row">
-      <div class="col-4" id="Friday">
+      <div class="col-12 col-lg-4" id="Friday">
         <h2>Friday</h2>
         <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
           <% if concert.schedule.day == 'Friday' %>
@@ -17,15 +17,15 @@
           <% end %>
         <% end %>
       </div>
-      <div class="col-4" id="Saturday">
+      <div class="col-12 col-lg-4" id="Saturday">
         <h2>Saturday</h2>
         <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
-          <% if concert.schedule.day == 'Saturday' %>
+            <% if concert.schedule.day == 'Saturday' %>
             <%= render 'schedules/partials/displaying_show', concert: concert %>
           <% end %>
         <% end %>
       </div>
-      <div class="col-4" id="Sunday">
+      <div class="col-12 col-lg-4" id="Sunday">
         <h2>Sunday</h2>
         <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
           <% if concert.schedule.day == 'Sunday' %>
@@ -43,11 +43,12 @@
     <div class="suggestions-header">
       <h2><%= current_user.first_name %>'s Suggestions</h2>
     </div class="suggestions-container">
+    <% raise %>
     <% @suggestions.each do |suggestion| %>
-      <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>
-    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>
-    <%=  %>
-    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post %>
+      <p> <%= suggestion.artist %> - <%= suggestion.stage.name %> - <%= suggestion.day %>
+    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00
+
+    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post, remote: true %>
       </p>
     <% end %>
 
