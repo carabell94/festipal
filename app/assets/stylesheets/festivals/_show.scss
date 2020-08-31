@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 50px !important;
+
+  @media (max-width: 540px) {
+    margin-top: 25px !important;
+  }
 }
 .festival-name {
   color: white;
