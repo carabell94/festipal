@@ -10,9 +10,10 @@
 }
 
 .show-page {
-  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg");
+  background:url('https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg');
   background-size: cover;
   background-position: center;
+  height: 100%;
 
 // 'Change Day' Dropdown Styling - Fri/Sat/Sun
   .dropdown-menu.show {
@@ -54,9 +55,9 @@
   background-color: #c4a0b9;
 }
 
-.name-artist {
-  color: #343a40 !important;
-}
+// .name-artist {
+//   color: #343a40;
+// }
 
 .colored-time {
   color: #07377e !important;
@@ -69,6 +70,7 @@
     font-size: 8px;
   }
 }
-
-
+.filler {
+  height: 200px;
+}
 

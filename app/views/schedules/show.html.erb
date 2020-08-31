@@ -8,32 +8,54 @@
     <div class="schedule-header">
       <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
     </div>
-    <% current_user.user_schedules.each do |concert| %>
-      <% if concert.schedule.stage.festival.name == @festival.name %>
-        <% if concert.schedule.end_time == 24 %>
-            <p> <%= link_to schedule_user_schedule_path(concert), method: :delete do %>
-                <i class="fas fa-minus-square"></i>
-                <% end %>
-              <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <%= concert.schedule.start_time %>.00 - 00.00</p>
-          <% else %>
-            <p> <%= link_to schedule_user_schedule_path(concert), method: :delete do %>
-                <i class="fas fa-minus-square"></i>
-                <% end %>
-              <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</p>
+    <div class="row">
+      <div class="col-4" id="Friday">
+        <h2>Friday</h2>
+        <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+          <% if concert.schedule.day == 'Friday' %>
+            <%= render 'schedules/partials/displaying_show', concert: concert %>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
+      <div class="col-4" id="Saturday">
+        <h2>Saturday</h2>
+        <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+          <% if concert.schedule.day == 'Saturday' %>
+            <%= render 'schedules/partials/displaying_show', concert: concert %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-4" id="Sunday">
+        <h2>Sunday</h2>
+        <% current_user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+          <% if concert.schedule.day == 'Sunday' %>
+            <%= render 'schedules/partials/displaying_show', concert: concert %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <div class="wrapper">
   <div class="suggestions text-center">
     <div class="suggestions-header">
-    <h2>Suggestions</h2></div>
-    <br>
-    <p>Suggestions based on the gaps in your schedule will be populated here for you to select if desired.</p>
+      <h2><%= current_user.first_name %>'s Suggestions</h2>
+    </div class="suggestions-container">
+    <% @suggestions.each do |suggestion| %>
+      <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>
+    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>
+    <%=  %>
+    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post %>
+      </p>
+    <% end %>
+
+    <p>Suggestions based on available artists be populated here for you to select if desired.</p>
   </div>
 </div>
+<div class="filler">
 
+</div>
 </div>
 
