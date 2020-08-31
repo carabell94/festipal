@@ -1,0 +1,7 @@
+<% if @festival.name == 'Glastonbury' %>
+  <%= image_tag 'https://res.cloudinary.com/dzjxqunz7/image/upload/v1598865060/glastonbury2019_s0uq2r.jpg', class: 'map-display' %>
+<% elsif @festival.name == 'Boomtown' %>
+  <%= image_tag 'https://res.cloudinary.com/dzjxqunz7/image/upload/v1598864971/boomtown-map_gypx0r.png', class: 'map-display' %>
+<% else %>
+  <%= image_tag 'https://res.cloudinary.com/dzjxqunz7/image/upload/v1598864971/wilderness-map_vz0wiq.png', class: 'map-display'%>
+<% end %>

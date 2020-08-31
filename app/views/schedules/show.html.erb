@@ -41,9 +41,17 @@
 <div class="wrapper">
   <div class="suggestions text-center">
     <div class="suggestions-header">
-    <h2>Suggestions</h2></div>
-    <br>
-    <p>Suggestions based on the gaps in your schedule will be populated here for you to select if desired.</p>
+      <h2><%= current_user.first_name %>'s Suggestions</h2>
+    </div class="suggestions-container">
+    <% @suggestions.each do |suggestion| %>
+      <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>
+    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>
+    <%=  %>
+    <%= link_to "Add", schedule_user_schedules_path(suggestion), method: :post %>
+      </p>
+    <% end %>
+
+    <p>Suggestions based on available artists be populated here for you to select if desired.</p>
   </div>
 </div>
 

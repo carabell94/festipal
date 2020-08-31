@@ -10,9 +10,10 @@
 }
 
 .show-page {
-  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg");
+  background:url('https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg');
   background-size: cover;
-  position-position: center;
+  background-position: center;
+  height: 80vh;
 
 // 'Change Day' Dropdown Styling - Fri/Sat/Sun
   .dropdown-menu.show {
@@ -63,5 +64,11 @@
   font-weight: bold;
 }
 
+.populate-schedule {
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+  }
+}
 
 

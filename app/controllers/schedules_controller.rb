@@ -28,6 +28,7 @@ class SchedulesController < ApplicationController
 
   def show
     @festival = Festival.find(params[:festival_id])
+    @suggestions = @festival.schedules.reject { |schedule| current_user.schedules.include? schedule }.uniq.sample(5)
   end
 
   private
