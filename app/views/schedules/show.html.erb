@@ -46,13 +46,12 @@
     </div class="suggestions-container">
 
     <% @suggestions.each do |suggestion| %>
-      <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
-    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00
-    <%=  %>
-
-    <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
+    <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
       <i class="fas fa-plus"></i>
-      <% end %></p>
+      <% end %>
+       <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
+    <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00 </p>
+
     <% end %>
 
   </div>
