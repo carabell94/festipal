@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 50px !important;
+
+  @media (max-width: 540px) {
+    margin-top: 25px !important;
+  }
 }
 .festival-name {
   color: white;
@@ -51,4 +56,52 @@
   border-radius: 10px;
 }
 
+.highlights-p-tag {
+  font-family: 'comfortaa', serif;
+
+  @media (max-width: 540px) {
+    font-size: 10px;
+  }
+}
+
+.social-highlight-card {
+  width: 30vw;
+
+  @media (max-width: 540px) {
+    margin-bottom: 16px;
+    width: 80vw;
+  }
+}
+
+.social-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+  @media (max-width: 540px) {
+
+  }
+}
+
+.youtube {
+  min-width: 480px;
+
+  iframe {
+    width: 100%;
+  }
+
+  @media (max-width: 540px) {
+    min-width: 300px;
+  }
+}
+
+.artists-generated-p {
+  font-size: 12px;
+  font-family: 'comfortaa', serif;
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+  }
+}
 

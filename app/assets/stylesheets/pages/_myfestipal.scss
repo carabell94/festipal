@@ -30,6 +30,10 @@ h1 {
 h2 {
   padding-bottom: 20px;
   font-size: 20px;
+
+  @media (max-width: 540px) {
+    padding-bottom: 10px;
+  }
 }
 
 .suggestions {
@@ -44,6 +48,13 @@ h2 {
 }
 
 .wrapper {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+
+  @media (max-width: 540px) {
+width: 100%;
+  }
+
+
+
 }

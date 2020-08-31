@@ -3,7 +3,7 @@
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo-with-man.png" %>
     <% end %>
-</div>
+  </div>
 
   <div id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -26,25 +26,5 @@
       <% end %>
     </ul>
   </div>
-</div>
-
-<!-- SUB NAVBAR -->
-<div class="menu1">
-
-  <form novalidate="novalidate" class="simple_form search navbar-change-festival" action="/find_festival" accept-charset="UTF-8" method="get">
-    <select label="false" prompt="Change Festival" onchange="this.form.submit();" name="search[id]" id="search_id2" class="select">
-      <option value="" disabled selected>Change Festival</option>
-      <option value="1" class="styling-navbar-dropdown">Glastonbury</option>
-      <option value="2" class="styling-navbar-dropdown">Boomtown</option>
-      <option value="3" class="styling-navbar-dropdown">Wilderness</option>
-    </select>
-  </form>
-
-  <div class="centring-subnav-headers">
-    <li><%= link_to "Festival Info", festival_path(@festival || Festival.first), class: " #{'active' if params[:controller] == 'festivals' && params[:action] == 'show'}" %></li>
-    <li><%= link_to "My FestiPlan", festival_schedule_path(@festival || Festival.first, :id), class: " #{'active' if params[:controller] == 'schedules' && params[:action] == 'show'}" %></li>
-    <!-- <li class="slide"></li> -->
-  </div>
-
 </div>
 

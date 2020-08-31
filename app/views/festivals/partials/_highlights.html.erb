@@ -1,17 +1,22 @@
-<div class="render-wrapper mt-5">
-    <div>
-      <%= render 'pages/partials/spotify' %>
-    </div>
-    <div class="mb-3">
+<p class="highlights-p-tag pink-highlight">Check out the latest pictures, tweets & playlists from <%= @festival.name %> </p>
+<div class="render-wrapper container">
+  <div class="social-card-wrapper">
+    <div class=" social-highlight-card">
       <%= render 'pages/partials/instagram' %>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 social-highlight-card youtube">
       <%= render 'pages/partials/youtube' %>
     </div>
-    <div class="mb-3">
+  </div>
+  <div class="social-card-wrapper">
+    <div class=" social-highlight-card">
+      <%= render 'pages/partials/spotify' %>
+    </div>
+    <div class=" social-highlight-card">
       <%= render 'pages/partials/twitter' %>
     </div>
   <!-- </div>
   if statement to display the information of the selected festival
 </div> -->
+  </div>
 </div>
