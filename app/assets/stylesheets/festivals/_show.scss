@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 50px !important;
+
+  @media (max-width: 540px) {
+    margin-top: 25px !important;
+  }
 }
 .festival-name {
   color: white;
@@ -60,6 +65,7 @@
 }
 
 .social-highlight-card {
+  width: 30vw;
 
   @media (max-width: 540px) {
     margin-bottom: 16px;
@@ -68,17 +74,25 @@
 }
 
 .social-card-wrapper {
-
-  @media (max-width: 540px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+  @media (max-width: 540px) {
+
   }
 }
 
 .youtube {
+  min-width: 480px;
+
+  iframe {
+    width: 100%;
+  }
 
   @media (max-width: 540px) {
-    width: 300px;
+    min-width: 300px;
   }
 }
 
