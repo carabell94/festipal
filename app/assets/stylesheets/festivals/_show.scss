@@ -96,3 +96,12 @@
   }
 }
 
+.artists-generated-p {
+  font-size: 12px;
+  font-family: 'comfortaa', serif;
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+  }
+}
+

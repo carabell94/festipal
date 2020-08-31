@@ -41,7 +41,8 @@
 <div class="wrapper">
   <div class="suggestions text-center">
     <div class="suggestions-header">
-      <h2><%= current_user.first_name %>'s Suggestions</h2>
+      <h2>Suggestions For <%= current_user.first_name %></h2>
+      <p class='artists-generated-p'><em>We have generated some suggested artists based on your selections above.</em></p>
     </div class="suggestions-container">
     <% @suggestions.each do |suggestion| %>
       <p> <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
@@ -51,7 +52,6 @@
       </p>
     <% end %>
 
-    <p>Suggestions based on available artists be populated here for you to select if desired.</p>
   </div>
 </div>
 <div class="filler">
