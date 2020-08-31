@@ -6,10 +6,12 @@ class UserSchedulesController < ApplicationController
       @user_schedule.save
       # flash[:notice] = "Event added successfully!"
     end
-    redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival, @user_schedule.schedule)
-    # respond_to do |format|
-    #   format.js { render inline: "location.reload();" }
-    # end
+    # redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival, @user_schedule.schedule)
+
+    respond_to do |format|
+      format.html
+      format.js { render inline: "location.reload();" }
+    end
   end
 
   def destroy
