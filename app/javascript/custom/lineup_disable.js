@@ -1,6 +1,5 @@
 
 const disableLink = () => {
-  console.log("calling the function");
 
   const buttons = document.querySelectorAll('.dropdown-button');
 
@@ -10,19 +9,22 @@ const disableLink = () => {
         setTimeout(function(){
 
           const alert = document.getElementById('show-alert');
-          console.log(alert);
 
           const links = document.querySelectorAll('.lineup-link');
-          console.log(links);
+          // console.log(links);
           links.forEach(function(link){
-            console.log('inside the forEach');
-          // console.log(link);
             link.addEventListener("click", (event) => {
-              console.log(event.currentTarget);
+              // console.log(event.currentTarget.classList[2]);
+
+
+
 
               const artist = event.currentTarget.querySelector('.name-artist');
+              const icon = event.currentTarget.querySelector('i');
 
               link.classList.add('disabled-lineup');
+              icon.classList.remove('fa-plus-square');
+              icon.classList.add('fa-check');
               showAlert(alert, artist);
               });
             });
@@ -34,7 +36,7 @@ const disableLink = () => {
     alert.innerText = `You have added ${artist.innerText} to your FestiPlan!`
     alert.removeAttribute('hidden');
     setTimeout(function(){
-      console.log(alert);
+      // console.log(alert);
       alert.setAttribute('hidden', false);
     }, 2000);
   };
