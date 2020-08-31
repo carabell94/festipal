@@ -31,6 +31,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import '../custom/navbar.js'
 import { disableLink } from '../custom/lineup_disable';
+import '../custom/map.js';
 
 
 document.addEventListener('turbolinks:load', () => {
