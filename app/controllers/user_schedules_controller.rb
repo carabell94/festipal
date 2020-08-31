@@ -5,12 +5,6 @@ class UserSchedulesController < ApplicationController
       @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
       @user_schedule.save
     end
-    redirect_to festival_path(Schedule.find(params[:schedule_id]).stage.festival)
-    # if # u are in festiplan redirect to same page
-
-    # elsif #if u are in lineup stay there
-
-    # end
   end
 
   def destroy

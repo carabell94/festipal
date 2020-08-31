@@ -13,7 +13,7 @@
   background:url('https://res.cloudinary.com/dzjxqunz7/image/upload/v1598529063/silhouette_dgra62.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 100%;
 
 // 'Change Day' Dropdown Styling - Fri/Sat/Sun
   .dropdown-menu.show {
@@ -70,5 +70,7 @@
     font-size: 8px;
   }
 }
-
+.filler {
+  height: 200px;
+}
 
