@@ -65,8 +65,15 @@
 .social-highlight-card {
 
   @media (max-width: 540px) {
-    height: 40px;
     margin-bottom: 16px;
+  }
+}
+
+.social-card-wrapper {
+
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 

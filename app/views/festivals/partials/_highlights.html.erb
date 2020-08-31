@@ -1,18 +1,18 @@
 <p class="highlights-p-tag pink-highlight">Check out the latest pictures, tweets & playlists from <%= @festival.name %> </p>
 <div class="render-wrapper mt-5 container">
-  <div class="row">
-    <div class="col-6 social-highlight-card">
+  <div class="row social-card-wrapper">
+    <div class="col-lg-6 col-sm-12 social-highlight-card">
       <%= render 'pages/partials/instagram' %>
     </div>
-    <div class="col-6 social-highlight-card">
+    <div class="col-lg-6 col-sm-12 social-highlight-card">
       <%= render 'pages/partials/twitter' %>
     </div>
   </div>
-  <div class="row">
-    <div class="col-6 social-highlight-card">
+  <div class="row social-card-wrapper">
+    <div class="col-lg-6 col-sm-12 social-highlight-card">
       <%= render 'pages/partials/spotify' %>
     </div>
-    <div class="mb-3 col-6 social-highlight-card">
+    <div class="mb-3 col-lg-6 col-sm-12 social-highlight-card">
       <%= render 'pages/partials/youtube' %>
     </div>
   </div>
