@@ -2,7 +2,11 @@
 <html>
 <head>
 <title>FestiPal Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track':
+    'reload' %>
     <%= wicked_pdf_stylesheet_link_tag "show" %>
+    <%= wicked_pdf_stylesheet_link_tag "myfestipal" %>
 </head>
 <body>
     <%= yield %>

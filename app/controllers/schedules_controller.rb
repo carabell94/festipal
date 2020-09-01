@@ -34,7 +34,8 @@ class SchedulesController < ApplicationController
       format.pdf do
         render pdf: "FestiPal Schedule",
                template: 'schedules/show.html.erb',
-               layout: "pdf.html.erb"
+               layout: "pdf.html",
+               encoding: "UTF-8"
       end
     end
   end

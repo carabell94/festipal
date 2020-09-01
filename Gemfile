@@ -5,6 +5,8 @@ ruby '2.6.6'
 
 # Facebook Login
 gem 'omniauth-facebook'
+# Grover
+gem 'grover'
 # WICKED PDF GEM
 gem 'wicked_pdf', '~> 1.4'
 # WKHTMLTOPDF (needed for wicked gem)
