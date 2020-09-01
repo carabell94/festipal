@@ -36,10 +36,11 @@
   <body>
     <div class="min-height">
       <%= render 'shared/navbar' %>
+      <% unless controller_name == "pages" %>
+        <%= render 'shared/sub-navbar' %>
+      <% end %>
       <%= render 'shared/flashes' %>
       <%= yield %>
-    </div>
-    <div class="height-144">
     </div>
     <%= render 'shared/footer' %>
   </body>

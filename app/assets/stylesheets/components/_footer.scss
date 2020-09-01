@@ -4,8 +4,6 @@
   background-color: #1f292f !important;
   flex-wrap: wrap;
   width: 100%;
-  position: fixed;
-  bottom: 0;
 
   p {
     color: white;
@@ -62,6 +60,7 @@ ul li.list {
 }
 
 ul li span {
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
@@ -115,7 +114,7 @@ ul li.list:nth-child(2) span {
 }
 
 ul li.list:nth-child(3) span {
-  background: #BA1C7C;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 
 }
 

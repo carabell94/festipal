@@ -87,16 +87,18 @@ background-color: lightgrey;
     outline: #d3bbcc;
   }
 
-  // @media (max-width: 540px) {
-  //   width: 60vw;
-  // }
+  @media (max-width: 540px) {
+    width: 60vw;
+  }
 }
 
 .centring-subnav-headers {
   margin: 0 auto;
+  padding-right: 135px;
 
   @media (max-width: 540px) {
     margin: 0;
+    padding-right: 0px;
   }
 }
 
