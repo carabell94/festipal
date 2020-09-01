@@ -31,7 +31,7 @@ const disableLink = () => {
         }, 1000);
       });
     });
-  };
+  }
   const showAlert = (alert, artist) => {
     alert.innerText = `You have added ${artist.innerText} to your FestiPlan!`
     alert.removeAttribute('hidden');
@@ -39,32 +39,26 @@ const disableLink = () => {
       // console.log(alert);
       alert.setAttribute('hidden', false);
     }, 2000);
-  };
+  }
 
   const disableTimeSlots = (links, link) => {
-    console.log(links);
-    // console.log(link);
+
     const selector = link.classList[2];
-    // console.log(selector);
-    // const timeSlots = document.querySelectorAll(links.classList[2]);
-    // console.log(timeSlots);
     links.forEach(function(link){
-      // console.log(selector);
       if ((link.classList.contains(selector)) && !(link.classList.contains('disabled-lineup'))){
 
-        console.log(link);
         link.removeAttribute('href');
         link.removeAttribute('data-method');
         link.classList.add('disabled-lineup');
+
         const icon = link.querySelector('i');
-        console.log(icon);
+
         icon.classList.remove('fa-plus-square');
         icon.classList.add("fa-times-circle");
-        // console.log(link);
       }
     });
   }
-};
+}
 
 
 export { disableLink };
