@@ -1,0 +1,50 @@
+<div class="review-big">
+  <div class="review-container">
+    <% if @festival.reviews.empty? && @festival.reviews < 4 %>
+              <!-- if statement to display only 4+ -->
+    <!-- display only 2 reviews -->
+    <!-- input goes white when unfocus -->
+    <!-- img spacing need fixing -->
+    <h4 class="review-header"><em>No Reviews Yet </em>☹️</h4>
+    <% end %>
+    <% @festival.reviews.each do |review| %>
+    <div class="review-inner">
+      <div class="block">
+        <div class="review-stars mb-2">
+          <%= review.user.name %>
+          <% if review.rating == 1 %>
+          <%= image_tag "1star.png", alt: "1-star rating" %>
+          <% elsif review.rating == 2 %>
+          <%= image_tag "2star.png", alt: "2-star rating" %>
+          <% elsif review.rating == 3 %>
+          <%= image_tag "3star.png", alt: "3-star rating" %>
+          <% elsif review.rating == 4 %>
+          <%= image_tag "4star.png", alt: "4-star rating" %>
+          <% else %>
+          <%= image_tag "5star.png", alt: "5-star rating" %>
+          <% end %>
+        </div>
+        <div class="review-content mb-2">
+          <%= review.content %>
+        </div>
+      </div>
+      <% review.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 160, width: 200, crop: :fill, class: "review-img" %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
+
+
+  <div class="review-form-container">
+    <div class="review-form-inner">
+      <%= simple_form_for [@festival, @review], remote: true do |f| %>
+      <%= f.input :content, label: "Share your Experience", height: 70 %>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Rate your Experience" %>
+      <%= f.input :photos, as: :file, label: "Share Photos (max 2)", input_html: { multiple: true } %>
+      <%= f.button :submit, value: "Submit review", class: "btn btn-info black mt-4" %>
+      <% end %>
+    </div>
+  </div>
+</div>
