@@ -5,6 +5,7 @@ class FestivalsController < ApplicationController
 
   def show
     @festival = Festival.find(params[:id])
+    @review = Review.new
   end
 
   def find_festival

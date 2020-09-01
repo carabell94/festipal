@@ -32,10 +32,12 @@ import "bootstrap";
 import '../custom/navbar.js'
 import { disableLink } from '../custom/lineup_disable';
 import '../custom/map.js';
+import '../custom/init_star_rating.js';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   disableLink();
+  initStarRating();
 });

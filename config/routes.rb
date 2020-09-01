@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :festivals, only: [:index, :show] do
     resources :schedules, only: [:index, :show, :create, :update, :destroy]
+    resources :reviews, only: [:create]
   end
   resources :schedules, only: [] do
     resources :user_schedules, only: [:create, :destroy]
