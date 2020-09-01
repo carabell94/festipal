@@ -6,7 +6,7 @@
 <div class="wrapper schedule-wrapper">
   <div class="schedule mx-3 text-center">
     <div class="schedule-header">
-      <p><%= current_user.first_name %>'s <%= @festival.name %> Schedule</p>
+      <h1><%= current_user.first_name %>'s <%= @festival.name %> Schedule</h1>
     </div>
     <div class="row">
       <div class="col-12 col-lg-4" id="Friday">
@@ -55,6 +55,10 @@
 
   </div>
 </div>
+  <br>
+<%= link_to 'Download Schedule', festival_schedule_path(@festival, :id, format: :pdf), class: 'btn btn-info' %>
+
+
 <div class="filler">
 
 </div>

@@ -5,6 +5,12 @@ ruby '2.6.6'
 
 # Facebook Login
 gem 'omniauth-facebook'
+# Grover
+gem 'grover'
+# WICKED PDF GEM
+gem 'wicked_pdf', '~> 1.4'
+# WKHTMLTOPDF (needed for wicked gem)
+gem 'wkhtmltopdf-binary'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,8 +34,6 @@ gem 'redis', '~> 4.0'
 gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
-gem 'dotenv-rails', groups: [:development, :test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
