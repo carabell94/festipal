@@ -11,7 +11,11 @@
 }
 
 .disabled-lineup {
-  cursor: none;
+  pointer-events: none;
+  // cursor: not-allowed;
+  span {
+    pointer-events: none;
+  }
   color: #c6a1bc !important;
   &:hover {
     text-decoration: none;

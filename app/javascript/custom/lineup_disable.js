@@ -14,10 +14,7 @@ const disableLink = () => {
           // console.log(links);
           links.forEach(function(link){
             link.addEventListener("click", (event) => {
-              // console.log(event.currentTarget.classList[2]);
-
-
-
+              // console.log(event.currentTarget);
 
               const artist = event.currentTarget.querySelector('.name-artist');
               const icon = event.currentTarget.querySelector('i');
@@ -25,6 +22,7 @@ const disableLink = () => {
               link.classList.add('disabled-lineup');
               icon.classList.remove('fa-plus-square');
               icon.classList.add('fa-check');
+              disableTimeSlots(links, link);
               showAlert(alert, artist);
               });
             });
@@ -40,6 +38,30 @@ const disableLink = () => {
       alert.setAttribute('hidden', false);
     }, 2000);
   };
+
+  const disableTimeSlots = (links, link) => {
+    console.log(links);
+    // console.log(link);
+    const selector = link.classList[2];
+    // console.log(selector);
+    // const timeSlots = document.querySelectorAll(links.classList[2]);
+    // console.log(timeSlots);
+    links.forEach(function(link){
+      // console.log(selector);
+      if ((link.classList.contains(selector)) && !(link.classList.contains('disabled-lineup'))){
+
+        console.log(link);
+        link.removeAttribute('href');
+        link.removeAttribute('data-method');
+        link.classList.add('disabled-lineup');
+        const icon = link.querySelector('i');
+        console.log(icon);
+        icon.classList.remove('fa-plus-square');
+        icon.classList.add("fa-times-circle");
+        // console.log(link);
+      }
+    });
+  }
 };
 
 
