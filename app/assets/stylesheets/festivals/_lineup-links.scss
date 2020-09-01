@@ -1,8 +1,12 @@
 .lineup {
-  font-size: 1rem;
+  font-size: 16px;
   color: #343a40;
   &:hover {
     text-decoration: none;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 15px;
   }
 
   p {
@@ -11,7 +15,11 @@
 }
 
 .disabled-lineup {
-  cursor: none;
+  pointer-events: none;
+  // cursor: not-allowed;
+  span {
+    pointer-events: none;
+  }
   color: #c6a1bc !important;
   &:hover {
     text-decoration: none;

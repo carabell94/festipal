@@ -8,13 +8,13 @@
           <% if concert.end_time == 24 %>
             <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
              <p>
-              <i class="<%= concert.user_schedules.where(user: current_user) != [] ? 'fas fa-check' : 'fas fa-plus-square' %>"></i> lineup_#{concert.start_time}
+              <i class="<%= concert.user_schedules.where(user: current_user) != [] ? 'fas fa-check' : 'fas fa-plus-square' %>"></i>
               <span class="name-artist"><%= concert.artist %></span> <span class="comfortaa-font colored-time"> <%= concert.start_time %>.00 - 00.00</span></p>
             <% end %>
             <% else %>
               <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} ", method: :post do %>
                 <p>
-                  <i class="<%= concert.user_schedules.where(user: current_user) != [] ? 'fas fa-check' : 'fas fa-plus-square' %>"></i> lineup_#{concert.start_time}
+                  <i class="<%= concert.user_schedules.where(user: current_user) != [] ? 'fas fa-check' : 'fas fa-plus-square' %>"></i>
                   <span class="name-artist"><%= concert.artist %></span> <span class="comfortaa-font colored-time"> <%= concert.start_time %>.00 - <%= concert.end_time %>.00</span></p>
               <% end %>
             <% end %>

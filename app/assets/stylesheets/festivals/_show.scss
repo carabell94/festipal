@@ -32,10 +32,13 @@
 }
 
 .schedule-header {
-  font-family: electronicadisplay;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
+
+  h1 {
+    font-family: electronicadisplay;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
 }
 
 .suggestions-header {

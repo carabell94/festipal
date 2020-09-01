@@ -1,6 +1,12 @@
 <div class="festipal-container text-center">
 
-    <div class="select-festival">
+  <div class="select-festival">
+  </div>
+
+<div class="wrapper schedule-wrapper">
+  <div class="schedule mx-3 text-center">
+    <div class="schedule-header">
+      <h1><%= current_user.first_name %>'s <%= @festival.name %> Schedule</h1>
     </div>
 
   <div class="wrapper schedule-wrapper">
@@ -55,9 +61,15 @@
         <% end %>
         <br>
 
+
     </div>
   </div>
-  <div class="filler">
+</div>
+  <br>
+<%= link_to 'Download Schedule', festival_schedule_path(@festival, :id, format: :pdf), class: 'btn btn-info' %>
+
+
+<div class="filler">
 
   </div>
 </div>
