@@ -7,7 +7,7 @@
           <div class="d-flex justify-content-end social_icon">
           </div class="d-flex justify-content-center text-center">
 
-          <h2 class="header2">Edit Personal Details <%= resource_name.to_s.humanize %></h2>
+          <h2 class="header2">Update Details</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
             <%= f.error_notification %>
@@ -43,7 +43,7 @@
 
           <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
 
-          <%= link_to "Back", :back %>
+          <%= link_to "Back", :back, class: "white" %>
 
         </div>
       </div>

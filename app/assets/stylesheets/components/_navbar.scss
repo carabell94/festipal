@@ -32,8 +32,8 @@
 .show .dropdown-menu {
 position: absolute;
 top: 34px;
-right: -50px;
-background-color: lightgrey;
+right: -20px;
+background-color: rgba(255, 255, 255, 0.7);
 }
 
 .menu1 {
@@ -74,7 +74,6 @@ background-color: lightgrey;
 #search_id2 {
   background-color: #d3bbcc;
   color: black;
-  // box-shadow: 0 0 8px ;
   width: 125px !important;
   border: 1px dotted black;
   border-radius: 5px;
@@ -101,6 +100,3 @@ background-color: lightgrey;
     padding-right: 0px;
   }
 }
-
-
-

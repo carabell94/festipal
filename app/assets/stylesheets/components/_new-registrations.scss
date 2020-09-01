@@ -41,7 +41,7 @@ label.string, label.email, label.password, .form-text.text-muted {
 }
 
 .container {
-  height: 100%;
+  // height: auto;
   align-content: center;
   margin: 0 auto;
 }
@@ -53,14 +53,14 @@ label.string, label.email, label.password, .form-text.text-muted {
   width: 400px;
 }
 
-// card-header1 neeed to be fixed
-
 .card-header1 {
-  background-color: rgba(0,0,0,0.3) !important;
+  background: rgba(255, 255, 255, 0.7)!important;
   border-radius: 10px!important;
   padding: 0.75rem 1.25rem;
   position: relative;
   top: -40px;
+  height: auto;
+  margin: 20px auto;
 }
 
 .social_icon span:hover{

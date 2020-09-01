@@ -39,7 +39,6 @@ textarea.form-control {
   @media (max-width: 540px) {
     width: 80%;
     margin-top: 5px;
-    // height: 100%;
   }
 }
 
@@ -100,4 +99,7 @@ textarea.form-control {
   font-size: 26px;
   border-radius: 10px;
   font-family: electronicadisplay;
+}
+ .file.optional {
+  font-weight: bold!important;
 }
