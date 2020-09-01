@@ -17,13 +17,15 @@ const disableLink = () => {
               // console.log(event.currentTarget);
 
               const artist = event.currentTarget.querySelector('.name-artist');
+              if (!link.classList.contains('disabled-lineup')) {
+                showAlert(alert, artist);
+              }
               const icon = event.currentTarget.querySelector('i');
 
               link.classList.add('disabled-lineup');
               icon.classList.remove('fa-plus-square');
               icon.classList.add('fa-check');
               disableTimeSlots(links, link);
-              showAlert(alert, artist);
               });
             });
         }, 1000);
