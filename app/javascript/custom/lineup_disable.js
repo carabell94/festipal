@@ -11,7 +11,7 @@ const disableLink = () => {
           const alert = document.getElementById('show-alert');
 
           const links = document.querySelectorAll('.lineup-link');
-          // console.log(links);
+          console.log(links);
           links.forEach(function(link){
             link.addEventListener("click", (event) => {
               // console.log(event.currentTarget);
@@ -28,7 +28,7 @@ const disableLink = () => {
               disableTimeSlots(links, link);
               });
             });
-        }, 1000);
+        }, 2000);
       });
     });
   }
