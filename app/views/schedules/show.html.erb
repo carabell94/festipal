@@ -43,7 +43,6 @@
     <div class="suggestions-header">
       <h2><%= current_user.first_name %>'s Suggestions</h2>
     </div class="suggestions-container">
-    <% raise %>
     <% @suggestions.each do |suggestion| %>
       <p> <%= suggestion.artist %> - <%= suggestion.stage.name %> - <%= suggestion.day %>
     <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00
