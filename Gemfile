@@ -7,7 +7,7 @@ ruby '2.6.6'
 gem 'omniauth-facebook'
 # WICKED PDF GEM
 gem 'wicked_pdf', '~> 1.4'
-# WKHTMLTOPDF
+# WKHTMLTOPDF (needed for wicked gem)
 gem 'wkhtmltopdf-binary'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
