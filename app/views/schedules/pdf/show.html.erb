@@ -9,6 +9,7 @@
       </div>
         <br>
       <div class="row">
+      <% if UserSchedule.where(user: @user).collect(&:schedule).select{ |x| x.day == 'Friday' }.present? %>
         <div class="col-12 col-lg-4" id="Friday">
           <h2 class="pdf-day-styling">Friday</h2>
           <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
@@ -29,46 +30,51 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
 
-        <div class="col-12 col-lg-4" id="Saturday">
-          <h2 class="pdf-day-styling">Saturday</h2>
-          <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
-              <% if concert.schedule.day == 'Saturday' %>
-                <% if concert.schedule.stage.festival.name == @festival.name %>
-                    <% if concert.schedule.end_time == 24 %>
-                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
-                          <i class="fas fa-minus-square"></i>
-                          <% end %>
-                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
-                    <% else %>
-                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
-                          <i class="fas fa-minus-square"></i>
-                          <% end %>
-                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+        <% if UserSchedule.where(user: @user).collect(&:schedule).select{ |x| x.day == 'Saturday' }.present? %>
+          <div class="col-12 col-lg-4" id="Saturday">
+            <h2 class="pdf-day-styling">Saturday</h2>
+            <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+                <% if concert.schedule.day == 'Saturday' %>
+                  <% if concert.schedule.stage.festival.name == @festival.name %>
+                      <% if concert.schedule.end_time == 24 %>
+                        <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                            <i class="fas fa-minus-square"></i>
+                            <% end %>
+                            <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+                      <% else %>
+                        <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                            <i class="fas fa-minus-square"></i>
+                            <% end %>
+                            <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+                      <% end %>
                     <% end %>
-                  <% end %>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
 
-        <div class="col-12 col-lg-4" id="Sunday">
-          <h2 class="pdf-day-styling">Sunday</h2>
-          <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
-            <% if concert.schedule.day == 'Sunday' %>
-                <% if concert.schedule.stage.festival.name == @festival.name %>
-                    <% if concert.schedule.end_time == 24 %>
-                      <p>
-                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
-                    <% else %>
-                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
-                          <i class="fas fa-minus-square"></i>
-                          <% end %>
-                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+        <% if UserSchedule.where(user: @user).collect(&:schedule).select{ |x| x.day == 'Sunday' }.present? %>
+          <div class="col-12 col-lg-4" id="Sunday">
+            <h2 class="pdf-day-styling">Sunday</h2>
+            <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+              <% if concert.schedule.day == 'Sunday' %>
+                  <% if concert.schedule.stage.festival.name == @festival.name %>
+                      <% if concert.schedule.end_time == 24 %>
+                        <p>
+                            <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+                      <% else %>
+                        <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                            <i class="fas fa-minus-square"></i>
+                            <% end %>
+                            <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+                      <% end %>
                     <% end %>
-                  <% end %>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
         <br>
         <br>
       </div>
