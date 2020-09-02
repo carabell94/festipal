@@ -172,3 +172,32 @@
   .fa-plus-square:before {
     color: #343a40;
   }
+
+  // SCROLL SNAP CSS
+.scroll-div {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
+
+// html {
+//     scroll-snap-type: mandatory;
+//     scroll-snap-points-y: repeat(100vh);
+//     scroll-snap-type: y mandatory;
+// }
+// .section {
+//     border-bottom: 1px solid white;
+//     padding: 1rem;
+//     height: 100vh;
+//     scroll-snap-align: start;
+//     text-align: center;
+//     position: relative;
+// }
+
+
