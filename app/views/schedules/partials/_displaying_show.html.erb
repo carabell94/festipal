@@ -3,12 +3,12 @@
       <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
           <i class="fas fa-minus-square"></i>
           <% end %>
-          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font colored-time"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+          <span class="colored-artist"><%= concert.schedule.artist %> - <%= concert.schedule.stage.name %></span> <span class="comfortaa-font colored-time"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
     <% else %>
       <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
           <i class="fas fa-minus-square"></i>
           <% end %>
-          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font colored-time"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+          <span class="colored-artist"><%= concert.schedule.artist %> - <%= concert.schedule.stage.name %></span> <span class="comfortaa-font colored-time"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
     <% end %>
   <% end %>
 

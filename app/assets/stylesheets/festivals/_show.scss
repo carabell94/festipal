@@ -37,9 +37,13 @@
 
   h1 {
     font-family: electronicadisplay;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     color: black;
+
+    @media (max-width: 540px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -112,6 +116,16 @@
 
 .size-16px {
   font-size: 16px;
+  margin-top: 8px;
+
+  @media (max-width: 540px) {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
+
+.colored-artist {
+  color: #343a40 !important;
 }
 
 // PDF STYLING
@@ -134,3 +148,19 @@
 }
 
 
+// ICON COLOURS
+.fa-times-circle {
+  color: #645487;
+}
+
+.fa-check {
+  color: #c6a1bc;
+}
+
+.fa-minus-square {
+  color: #c6a1bc;
+}
+
+  .fa-plus-square:before {
+    color: #343a40;
+  }
