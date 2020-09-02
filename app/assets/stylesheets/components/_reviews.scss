@@ -2,7 +2,11 @@
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   height: 400px;
-  width: 350px;
+  // width: 40%;
+  @media (max-width: 540px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .review-form-inner {
@@ -29,6 +33,7 @@ textarea.form-control {
 .review-container {
   border-radius: 10px;
   height: auto;
+  flex-grow: 1;
 }
 
 .review-content {
@@ -47,58 +52,59 @@ textarea.form-control {
 }
 
 .review-inner {
-  margin: 10px 0;
+  margin-bottom: 10px;
+  margin-right: 60px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   display: flex;
-  width: 90%;
+  border-radius: 10px;
+
   justify-content: space-between;
 
   @media (max-width: 540px) {
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px auto;
   }
 }
 
-.block {
-  display: block;
-}
-.review-inner .review-img {
+.review-img {
     border-radius: 10px;
 
   @media (max-width: 540px) {
     width: 90%;
     margin-top: 5px;
     height: 100%;
+    margin-left: 0;
   }
 }
-.review-big img {
-  border-radius: 10px;
-  @media (max-width: 540px) {
-    width: 30%;
-    margin-top: 5px;
-    height: 100%;
-  }
-}
+
 .review-big {
-  width: 100%;
+  margin: 0;
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 20px 80px;
   @media (max-width: 540px) {
     flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 .review-header {
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 26px;
   border-radius: 10px;
   font-family: electronicadisplay;
+  margin-right: 20px;
+
+  @media (max-width: 540px) {
+  padding: 36px;
+  margin-right: 0;
+  }
 }
  .file.optional {
   font-weight: bold!important;
@@ -108,3 +114,11 @@ textarea.form-control {
   justify-content: center;
   margin: 5px auto;
 }
+.block {
+  width: 500px;
+
+  @media (max-width: 540px) {
+  width: 100%;
+  }
+}
+

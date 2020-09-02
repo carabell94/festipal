@@ -6,7 +6,7 @@ class FestivalsController < ApplicationController
   def show
     @festival = Festival.find(params[:id])
     @review = Review.new
-    @top_reviews = Review.where("rating > ?", 3).limit(2)
+    @top_reviews = @festival.reviews.where("rating > ?", 3).limit(2)
   end
 
   def find_festival

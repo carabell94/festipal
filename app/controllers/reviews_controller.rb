@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
       render 'festivals/partials/highlights', festival: @festival
     end
   end
+
   private
 
   def strong_params
