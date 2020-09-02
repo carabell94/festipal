@@ -1,19 +1,16 @@
 <%= wicked_pdf_stylesheet_link_tag "application" %>
 <div class="festipal-container text-center">
-  <div class="select-festival">
-  </div>
-
   <div class="wrapper schedule-wrapper container-pdf">
     <div class="mx-3 text-center">
       <br>
       <br>
       <div>
-        <h1><%= @user.first_name %>'s <%= @festival.name %> Schedule</h1>
+        <h1 class="pdf-header-styling"><%= @user.first_name %>'s <%= @festival.name %> Schedule</h1>
       </div>
         <br>
       <div class="row">
         <div class="col-12 col-lg-4" id="Friday">
-          <h2>Friday</h2>
+          <h2 class="pdf-day-styling">Friday</h2>
           <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
             <% if concert.schedule.day == 'Friday' %>
                 <% if concert.schedule.stage.festival.name == @festival.name %>
@@ -34,7 +31,7 @@
         </div>
 
         <div class="col-12 col-lg-4" id="Saturday">
-          <h2>Saturday</h2>
+          <h2 class="pdf-day-styling">Saturday</h2>
           <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
               <% if concert.schedule.day == 'Saturday' %>
                 <% if concert.schedule.stage.festival.name == @festival.name %>
@@ -55,7 +52,7 @@
         </div>
 
         <div class="col-12 col-lg-4" id="Sunday">
-          <h2>Sunday</h2>
+          <h2 class="pdf-day-styling">Sunday</h2>
           <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
             <% if concert.schedule.day == 'Sunday' %>
                 <% if concert.schedule.stage.festival.name == @festival.name %>
@@ -82,10 +79,9 @@
     <div class="mx-3 text-center">
       <div>
         <br>
-        <h2>Suggestions For <%= @user.first_name %></h2>
-        <p class='artists-generated-p'><em>We have generated some suggested artists based on your selections above.</em></p>
+        <h2 class="pdf-suggestions-styling">Your Suggestions</h2>
+        <p class='artists-generated-p'><em>Why not fill those gaps in your schedule?</em></p>
       </div class="suggestions-container">
-      <br>
       <% @suggestions.each do |suggestion| %>
       <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
         <i class="fas fa-plus"></i>
