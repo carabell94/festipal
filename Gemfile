@@ -10,7 +10,7 @@ gem 'grover'
 # WICKED PDF GEM
 gem 'wicked_pdf', '~> 1.4'
 # WKHTMLTOPDF (needed for wicked gem)
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
