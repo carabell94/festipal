@@ -6,7 +6,7 @@
     <% @top_reviews.each do |review| %>
     <div class="review-inner">
       <div class="block">
-        <div class="review-stars mb-2">
+        <div class="review-stars mb-3">
           <%= review.user.name %>
           <% if review.rating == 1 %>
           <%= image_tag "1star.png", alt: "1-star rating" %>
