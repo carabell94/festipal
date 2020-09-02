@@ -7,11 +7,11 @@ $(function() {
   var cur_img;
 
   var ui = {
-    magniflier: $('.magniflier')
+    magnifier: $('.magnifier')
   };
 
   // Add the magnifying glass
-  if (ui.magniflier.length) {
+  if (ui.magnifier.length) {
     var div = document.createElement('div');
     div.setAttribute('class', 'glass');
     ui.glass = $(div);
@@ -57,7 +57,7 @@ $(function() {
 
     // The background position of div.glass will be
     // changed according to the position
-    // of the mouse over the img.magniflier
+    // of the mouse over the img.magnifier
     //
     // So we will get the ratio of the pixel
     // under the mouse with respect
@@ -89,7 +89,7 @@ $(function() {
     return;
   };
 
-  $('.magniflier').on('mousemove', function() {
+  $('.magnifier').on('mousemove', function() {
     ui.glass.fadeIn(200);
 
     cur_img = $(this);
