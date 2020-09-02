@@ -1,0 +1,97 @@
+<%= wicked_pdf_stylesheet_link_tag "application" %>
+<div class="festipal-container text-center">
+  <div class="wrapper schedule-wrapper container-pdf">
+    <div class="mx-3 text-center">
+      <br>
+      <br>
+      <div>
+        <h1 class="pdf-header-styling"><%= @user.first_name %>'s <%= @festival.name %> Schedule</h1>
+      </div>
+        <br>
+      <div class="row">
+        <div class="col-12 col-lg-4" id="Friday">
+          <h2 class="pdf-day-styling">Friday</h2>
+          <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+            <% if concert.schedule.day == 'Friday' %>
+                <% if concert.schedule.stage.festival.name == @festival.name %>
+                    <% if concert.schedule.end_time == 24 %>
+                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                          <i class="fas fa-minus-square"></i>
+                          <% end %>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+                    <% else %>
+                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                          <i class="fas fa-minus-square"></i>
+                          <% end %>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+                    <% end %>
+                  <% end %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="col-12 col-lg-4" id="Saturday">
+          <h2 class="pdf-day-styling">Saturday</h2>
+          <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+              <% if concert.schedule.day == 'Saturday' %>
+                <% if concert.schedule.stage.festival.name == @festival.name %>
+                    <% if concert.schedule.end_time == 24 %>
+                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                          <i class="fas fa-minus-square"></i>
+                          <% end %>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+                    <% else %>
+                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                          <i class="fas fa-minus-square"></i>
+                          <% end %>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+                    <% end %>
+                  <% end %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="col-12 col-lg-4" id="Sunday">
+          <h2 class="pdf-day-styling">Sunday</h2>
+          <% @user.user_schedules.joins(:schedule).order("schedules.start_time asc").each do |concert| %>
+            <% if concert.schedule.day == 'Sunday' %>
+                <% if concert.schedule.stage.festival.name == @festival.name %>
+                    <% if concert.schedule.end_time == 24 %>
+                      <p>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - 00.00</span></p>
+                    <% else %>
+                      <p> <%= link_to schedule_user_schedule_path(concert), method: :delete, remote: true do %>
+                          <i class="fas fa-minus-square"></i>
+                          <% end %>
+                          <%= concert.schedule.artist %> - <%= concert.schedule.stage.name %> <span class="comfortaa-font"> <%= concert.schedule.start_time %>.00 - <%= concert.schedule.end_time %>.00</span></p>
+                    <% end %>
+                  <% end %>
+            <% end %>
+          <% end %>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper suggestions-wrapper container-pdf">
+    <div class="mx-3 text-center">
+      <div>
+        <br>
+        <h2 class="pdf-suggestions-styling">Your Suggestions</h2>
+        <p class='artists-generated-p'><em>Why not fill those gaps in your schedule?</em></p>
+      </div class="suggestions-container">
+      <% @suggestions.each do |suggestion| %>
+      <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
+        <i class="fas fa-plus"></i>
+        <% end %>
+         <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
+      <span class="comfortaa-font"> <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00 </span></p>
+      <% end %>
+      <br>
+      <br>
+
+    </div>
+  </div>
+</div>
