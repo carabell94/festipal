@@ -46,7 +46,7 @@
     </div class="suggestions-container">
     <% @suggestions.each do |suggestion| %>
     <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
-      <i class="fas fa-plus"></i>
+      <i class='fas fa-plus-square'></i>
       <% end %>
        <%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %>
     <span class="comfortaa-font colored-time"> <%= suggestion.start_time %>.00 - <%= suggestion.end_time %>.00 </span></p>
