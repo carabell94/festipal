@@ -14,22 +14,25 @@ class FestivalsController < ApplicationController
 
   def display_friday
     @festival = Festival.find(params[:festival])
-    @start_times = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Friday' }.collect(&:start_time)
-    @festival_names = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Friday' }.collect(&:stage).collect(&:festival).collect(&:name)
+    @festivalschedules = @festival.schedules.where(day: 'Friday')
+    @userschedules = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Friday' }
+    @start_times = (@festivalschedules & @userschedules).collect(&:start_time)
     render :display_friday
   end
 
   def display_saturday
     @festival = Festival.find(params[:festival])
-    @start_times = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Saturday' }.collect(&:start_time)
-    @festival_names = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Saturday' }.collect(&:stage).collect(&:festival).collect(&:name)
+    @festivalschedules = @festival.schedules.where(day: 'Saturday')
+    @userschedules = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Saturday' }
+    @start_times = (@festivalschedules & @userschedules).collect(&:start_time)
     render :display_saturday
   end
 
   def display_sunday
     @festival = Festival.find(params[:festival])
-    @start_times = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Sunday' }.collect(&:start_time)
-    @festival_names = UserSchedule.where(user: current_user).collect(&:schedule).flatten.select { |x| x.day == 'Sunday' }.collect(&:stage).collect(&:festival).collect(&:name)
+    @festivalschedules = @festival.schedules.where(day: 'Sunday')
+    @userschedules = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Sunday' }
+    @start_times = (@festivalschedules & @userschedules).collect(&:start_time)
     render :display_sunday
   end
 end
