@@ -1,13 +1,9 @@
 <div class="review-big">
   <div class="review-container">
-    <% if @festival.reviews.empty? %>
-              <!-- if statement to display only 4+ -->
-    <!-- display only 2 reviews -->
-    <!-- input goes white when unfocus -->
-    <!-- img spacing need fixing -->
+    <% if @top_reviews.empty? %>
     <h4 class="review-header"><em>No Reviews Yet </em>☹️</h4>
     <% end %>
-    <% @festival.reviews.each do |review| %>
+    <% @top_reviews.each do |review| %>
     <div class="review-inner">
       <div class="block">
         <div class="review-stars mb-2">
