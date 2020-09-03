@@ -88,7 +88,7 @@
         <h2 class="pdf-suggestions-styling">Your Suggestions</h2>
         <p class='artists-generated-p'><em>Why not fill those gaps in your schedule?</em></p>
       </div class="suggestions-container">
-      <% @suggestions.each do |suggestion| %>
+      <% @suggestions.sort_by{ |x| [x.day, x.start_time] }.each do |suggestion| %>
       <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
         <i class="fas fa-plus"></i>
         <% end %>
