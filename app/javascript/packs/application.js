@@ -33,6 +33,7 @@ import '../custom/navbar.js'
 import { disableLink } from '../custom/lineup_disable';
 import '../custom/map.js';
 import { initStarRating } from '../custom/init_star_rating.js';
+import { closeAlert } from '../custom/closeAlert'
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -40,4 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   disableLink();
   initStarRating();
+  closeAlert();
 });
