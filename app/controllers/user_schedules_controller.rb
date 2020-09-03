@@ -5,8 +5,8 @@ class UserSchedulesController < ApplicationController
       respond_to do |format|
         format.js { render inline: "location.reload();" }
       end
-    else
-      redirect_to festival_path(@user_schedule.schedule.stage.festival)
+    # else
+    #   redirect_to festival_path(@user_schedule.schedule.stage.festival) and return
     end
   end
 
