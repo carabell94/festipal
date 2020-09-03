@@ -45,7 +45,7 @@
       <p class='artists-generated-p'><em>We have generated some suggested artists based on your selections above.</em></p>
     </div class="suggestions-container">
     <% @suggestions.sort_by{ |x| [x.day, x.start_time] }.each do |suggestion| %>
-    <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
+    <p> <%= link_to schedule_user_schedules_path(suggestion, suggestion: true), method: :post, remote: true do %>
       <i class='fas fa-plus-square'></i>
       <% end %>
        <span class="colored-artist"><%= suggestion.artist %> - <%= suggestion.stage.name %>, <%= suggestion.day %></span>
