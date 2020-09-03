@@ -28,7 +28,8 @@ class SchedulesController < ApplicationController
 
   def show
     @festival = Festival.find(params[:festival_id])
-    @suggestions = @festival.schedules.reject { |schedule| current_user.schedules.include? schedule }.uniq.sample(5)
+    @suggestions = suggestions(@festival)
+
     @user = current_user
     respond_to do |format|
       format.html
@@ -41,6 +42,10 @@ class SchedulesController < ApplicationController
     end
   end
 
+    # @festival_schedules_day = @festival.schedules.where(day: 'Friday')
+    # @user_schedules = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Friday' }
+    # @start_times_day = (@festival_schedules_day & @user_schedules).collect(&:start_time)
+
   private
 
   def strong_params
@@ -50,5 +55,25 @@ class SchedulesController < ApplicationController
   def find_by_id
     @festival = Festival.find(params[:festival_id])
     @schedule = Schedule.find(params[:id])
+  end
+
+  def suggestions(festival)
+    @festival_schedules_friday = festival.schedules.where(day: 'Friday')
+    @festival_schedules_saturday = festival.schedules.where(day: 'Saturday')
+    @festival_schedules_sunday = festival.schedules.where(day: 'Sunday')
+
+    @user_schedules_friday = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Friday' }
+    @user_schedules_saturday = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Saturday' }
+    @user_schedules_sunday = UserSchedule.where(user: current_user).collect(&:schedule).filter { |x| x.day == 'Sunday' }
+
+    @start_times_friday = (@festival_schedules_friday & @user_schedules_friday).collect(&:start_time)
+    @start_times_saturday = (@festival_schedules_saturday & @user_schedules_saturday).collect(&:start_time)
+    @start_times_sunday = (@festival_schedules_sunday & @user_schedules_sunday).collect(&:start_time)
+
+    @free_schedules_friday = @festival_schedules_friday.reject { |schedule| @start_times_friday.include? schedule.start_time}
+    @free_schedules_saturday = @festival_schedules_saturday.reject { |schedule| @start_times_saturday.include? schedule.start_time}
+    @free_schedules_sunday = @festival_schedules_sunday.reject { |schedule| @start_times_sunday.include? schedule.start_time}
+
+    @suggestions = (@free_schedules_friday + @free_schedules_saturday + @free_schedules_sunday).sample(5)
   end
 end
