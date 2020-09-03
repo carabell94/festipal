@@ -44,7 +44,7 @@
       <h2 class="colored-artist">Suggestions For <%= current_user.first_name %></h2>
       <p class='artists-generated-p'><em>We have generated some suggested artists based on your selections above.</em></p>
     </div class="suggestions-container">
-    <% @suggestions.each do |suggestion| %>
+    <% @suggestions.sort_by{ |x| [x.day, x.start_time] }.each do |suggestion| %>
     <p> <%= link_to schedule_user_schedules_path(suggestion), method: :post, remote: true do %>
       <i class='fas fa-plus-square'></i>
       <% end %>
