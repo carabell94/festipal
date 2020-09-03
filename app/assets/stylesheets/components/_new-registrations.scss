@@ -20,6 +20,10 @@ label.string, label.email, label.password, .form-text.text-muted {
   height: 70px;
   margin: 0 auto;
 
+  @media (max-width: 540px) {
+    height: 50px;
+  }
+
   .custom-links {
     color: black;
     background-color: rgb(197,162,187);

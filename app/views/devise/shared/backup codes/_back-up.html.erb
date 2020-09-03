@@ -1,2 +1,12 @@
 <!-- I do not want to lose this code for the Facebook button, so I am keeping it in a separate file, in case we need it. It is not link with anyone, does not do anything, but I cannot comment it out -->
 <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class: "btn btn-lg btn-primary rounded-pill" %><br />
+<!--
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+
+    <%= link_to omniauth_authorize_path(resource_name, provider), class: "btn btn-lg btn-primary rounded-pill" do  %>
+      <%= content_tag :i, "", class: "fab fa-facebook-f" %>
+      <%= content_tag :span, "Sign in with #{OmniAuth::Utils.camelize(provider)}", class: "pl-3" %>
+    <% end %>
+  <% end %>
+<% end %> -->
