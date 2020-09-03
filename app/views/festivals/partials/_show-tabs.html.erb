@@ -1,26 +1,27 @@
 <div class="show-tabs">
   <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-lineup-tab" data-toggle="pill" href="#pills-lineup" role="tab" aria-controls="pills-lineup" aria-selected="true">Line Up</a>
+      <a class="nav-link active" id="pills-highlights-tab" data-toggle="pill" href="#pills-highlights" role="tab" aria-controls="pills-highlights" aria-selected="false">Highlights</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">Map</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-highlights-tab" data-toggle="pill" href="#pills-highlights" role="tab" aria-controls="pills-highlights" aria-selected="false">Highlights</a>
+      <a class="nav-link" id="pills-lineup-tab" data-toggle="pill" href="#pills-lineup" role="tab" aria-controls="pills-lineup" aria-selected="true">Line Up</a>
     </li>
   </ul>
   <div class="tab-content" id="pills-tabContent">
 
-    <div class="tab-pane fade show active comfortaa-font" id="pills-lineup" role="tabpanel" aria-labelledby="pills-lineup-tab">
-      <%= render 'festivals/partials/lineup', festival: @festival %>
+    <div class="tab-pane fade show active" id="pills-highlights" role="tabpanel" aria-labelledby="pills-highlights-tab">
+      <%= render 'festivals/partials/highlights' %>
     </div>
 
     <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
       <%= render 'festivals/partials/map' %>
     </div>
-    <div class="tab-pane fade" id="pills-highlights" role="tabpanel" aria-labelledby="pills-highlights-tab">
-      <%= render 'festivals/partials/highlights' %>
+
+    <div class="tab-pane fade comfortaa-font" id="pills-lineup" role="tabpanel" aria-labelledby="pills-lineup-tab">
+      <%= render 'festivals/partials/lineup', festival: @festival %>
     </div>
 
   </div>
