@@ -1,15 +1,12 @@
 class UserSchedulesController < ApplicationController
   def create
-    if Schedule.find(params[:schedule_id]).user_schedules.where(user: current_user) != []
-
+    @user_schedule = UserSchedule.create(user: current_user, schedule: Schedule.find(params[:schedule_id]))
+    if params[:suggestion]
+      respond_to do |format|
+        format.js { render inline: "location.reload();" }
+      end
     else
-      @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
-      @user_schedule.save
       redirect_to festival_path(@user_schedule.schedule.stage.festival)
-    end
-    respond_to do |format|
-      format.html
-      format.js { render inline: "location.reload();" }
     end
   end
 
