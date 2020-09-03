@@ -28,7 +28,7 @@ const disableLink = () => {
               disableTimeSlots(links, link);
               });
             });
-        }, 2000);
+        }, 1000);
       });
     });
   }
