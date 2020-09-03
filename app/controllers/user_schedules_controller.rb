@@ -5,6 +5,7 @@ class UserSchedulesController < ApplicationController
     else
       @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
       @user_schedule.save
+      redirect_to festival_path(@user_schedule.schedule.stage.festival)
     end
     respond_to do |format|
       format.html
