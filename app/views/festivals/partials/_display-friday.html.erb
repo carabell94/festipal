@@ -6,7 +6,7 @@
         <h3 class='display-day-of-week text-dark'><%= stage.name %></h3>
         <% stage.schedules.where(day: 'Friday').each do |concert| %>
           <% if concert.end_time == 24 %>
-            <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} #{@start_times_day.include?(concert.start_time) ? 'disabled-lineup' : '' }", method: :post do %>
+            <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} #{@start_times_day.include?(concert.start_time) ? 'disabled-lineup' : '' }", method: :post, remote: true do %>
              <p>
               <i class="
                 <%= if @start_times_day.include?(concert.start_time) && concert.user_schedules.where(user: current_user) != []
@@ -20,7 +20,7 @@
               <span class="name-artist"><%= concert.artist %></span> <span class="comfortaa-font colored-time"> <%= concert.start_time %>.00 - 00.00</span></p>
             <% end %>
             <% else %>
-              <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} #{@start_times_day.include?(concert.start_time) ? 'disabled-lineup' : '' }", method: :post do %>
+              <%= link_to schedule_user_schedules_path(concert), class: "lineup lineup-link lineup_#{concert.start_time} #{concert.user_schedules.where(user: current_user) != [] ? 'disabled-lineup' : ''} #{@start_times_day.include?(concert.start_time) ? 'disabled-lineup' : '' }", method: :post, remote: true do %>
                 <p>
                   <i class="
                   <%= if @start_times_day.include?(concert.start_time) && concert.user_schedules.where(user: current_user) != []

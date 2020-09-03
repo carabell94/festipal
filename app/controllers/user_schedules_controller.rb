@@ -6,8 +6,6 @@ class UserSchedulesController < ApplicationController
       @user_schedule = UserSchedule.new(user: current_user, schedule: Schedule.find(params[:schedule_id]))
       @user_schedule.save
     end
-    # redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival, @user_schedule.schedule)
-
     respond_to do |format|
       format.html
       format.js { render inline: "location.reload();" }
@@ -17,7 +15,7 @@ class UserSchedulesController < ApplicationController
   def destroy
     @user_schedule = UserSchedule.find(params[:schedule_id])
     @user_schedule.destroy
-    # raise
+
     redirect_to festival_schedule_path(@user_schedule.schedule.stage.festival)
   end
 end
