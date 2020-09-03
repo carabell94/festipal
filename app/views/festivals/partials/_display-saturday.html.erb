@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row scroll-div">
     <% @festival.stages.each do |stage| %>
-      <div class="col-12 col-md-6 rounded-corners">
+      <div class="col-12 col-md-6 rounded-corners section">
         <h3 class='display-day-of-week text-dark'><%= stage.name %></h3>
         <% stage.schedules.where(day: 'Saturday').each do |concert| %>
           <% if concert.end_time == 24 %>
@@ -43,4 +43,18 @@
 <div hidden id="show-alert" class="alert alert-primary" role="alert">
 
 </div>
+
+<script>
+    const gra = function(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    const init = function(){
+        let items = document.querySelectorAll('.section');
+        for (let i = 0; i < items.length; i++){
+            items[i].style.background = randomColor({luminosity: 'light'});
+        }
+        cssScrollSnapPolyfill()
+    }
+    init();
+</script>
 
