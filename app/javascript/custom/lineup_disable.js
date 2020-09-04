@@ -47,6 +47,7 @@ const disableLink = () => {
     links.forEach(function(link){
       if ((link.classList.contains(selector)) && !(link.classList.contains('disabled-lineup'))){
 
+        link.classList.add('cross-line');
         link.removeAttribute('href');
         link.removeAttribute('data-method');
         link.classList.add('disabled-lineup');
