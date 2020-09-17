@@ -12,14 +12,17 @@
   </ul>
   <div class="tab-content" id="pills-tabContent">
 
+    <!-- HIGHLIGHTS -->
     <div class="tab-pane fade show active" id="pills-highlights" role="tabpanel" aria-labelledby="pills-highlights-tab">
       <%= render 'festivals/partials/highlights' %>
     </div>
 
+    <!-- MAP -->
     <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
       <%= render 'festivals/partials/map' %>
     </div>
 
+    <!-- LINEUP -->
     <div class="tab-pane fade comfortaa-font" id="pills-lineup" role="tabpanel" aria-labelledby="pills-lineup-tab">
       <%= render 'festivals/partials/lineup', festival: @festival %>
     </div>
