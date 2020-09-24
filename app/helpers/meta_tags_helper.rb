@@ -1,10 +1,10 @@
 module MetaTagsHelper
   def meta_title
-    content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["meta_title"]
+    content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["FestiPal"]
   end
 
   def meta_description
-    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["meta_description"]
+    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["Your #1 Festival Friend"]
   end
 
   def meta_image
