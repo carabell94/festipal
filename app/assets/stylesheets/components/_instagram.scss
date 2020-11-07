@@ -6,7 +6,6 @@
   border-radius: 10px;
 }
 
-
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
@@ -34,14 +33,14 @@
 }
 // div wrap the whole carousel
 .wrapper {
-margin: 0 auto;
+  margin: 0 auto;
 
-@media (max-width: 540px) {
-  width: 90%;
-}
+  @media (max-width: 540px) {
+    width: 90%;
+  }
 }
 // -------------------------------
-// outter div containing insta logo and background
+// outer div containing insta logo and background
 .outside-wrapper {
   background: url('https://res.cloudinary.com/dzjxqunz7/image/upload/q_auto,f_auto,fl_lossy/v1598536756/insta-background_vfenhg.jpg');
   background-size: cover;
